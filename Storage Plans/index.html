@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Plans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="contents">
+            <div class="content active js-schedule-table" id="item-1">
+                <div class="contentBack"></div>
+                <div class="top">
+                    <div class="backButton">
+                        <div class="arrow"></div>
+                    </div>
+                    <h3>Total Storage</h3>
+                </div>
+                <div class="bottom">
+                    <div class="circle"><div class="pie-chart"></div></div>
+                    <div class="stat">
+                        <h2>30 GB</h2>
+                        <p>Total storage</p>
+                        <h2>3.6 GB</h2>
+                        <p>10% used</p>
+                        <button>View details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="content js-schedule-table" id="item-2">
+                <div class="contentBack"></div>
+                <div class="top">
+                    <div class="backButton">
+                        <div class="arrow"></div>
+                    </div>
+                    <h3>Total Storage</h3>
+                </div>
+                <div class="bottom">
+                    <div class="circle"><div class="pie-chart"></div></div>
+                    <div class="stat">
+                        <h2>100 GB</h2>
+                        <p>Total storage</p>
+                        <h2>23.7 GB</h2>
+                        <p>47% used</p>
+                        <button>View details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="content js-schedule-table" id="item-3">
+                <div class="contentBack"></div>
+                <div class="top">
+                    <div class="backButton">
+                        <div class="arrow"></div>
+                    </div>
+                    <h3>Total Storage</h3>
+                </div>
+                <div class="bottom">
+                    <div class="circle"><div class="pie-chart"></div></div>
+                    <div class="stat">
+                        <h2>1 TB</h2>
+                        <p>Total storage</p>
+                        <h2>102.4 GB</h2>
+                        <p>72% used</p>
+                        <button>View details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="toggleContent">
+            <div class="toggleBack">
+                <h2>Plans</h2>
+            </div>
+            <div data-target="#item-1" class="item active js-schedule-tab" id="first">
+                <div class="arrow-up-gradient"></div>
+                <h2>30 GB</h2>
+                <h3>Current plan</h2>
+            </div>
+            <div data-target="#item-2" class="item js-schedule-tab" id="second">
+                <div class="left">
+                    <div class="arrow-up-gradient"></div>
+                    <h2>100 GB</h2>
+                </div>
+                <div class="right">
+                    <button>NOK 17.00/mounth</button>
+                    <a href="#">Or prepay anually NOK 170.00/year</a>
+                </div>
+            </div>
+            <div data-target="#item-3" class="item js-schedule-tab" id="third">
+                <div class="left">
+                    <div class="arrow-up-gradient"></div>
+                    <h2>1 TB</h2>
+                </div>
+                <div class="right">
+                    <button>NOK 89.00/mounth</button>
+                    <a href="#">Or prepay anually NOK 899.00/year</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

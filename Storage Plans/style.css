@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+:root {
+    --background-collor: #c6c8c9;
+    --content-background-collor: #ebebeb;
+    --content-back-background-collor: #cdcfd0;
+    --content-circle-background-collor: #a0cce2;
+    --content-circle-front-background-collor: #424fc1;
+}
+
+body {
+    background-color: var(--background-collor);
+}
+
+button {
+    padding: 15px 20px;
+    background-color: #111;
+    color: #fff;
+    border-radius: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    height: 100vh;
+}
+
+.content .contentBack {
+    position: absolute;
+    background-color: var(--content-back-background-collor);
+    top: -17px;
+    left: 35px;
+    height: 400px;
+    width: 350px;
+    border-radius: 15px;
+    border: 1px solid #fff;
+    z-index: -1;
+}
+
+.container .content.active {
+    display: block;
+}
+
+.container .content {
+    position: relative;
+    background-color: var(--content-background-collor);
+    padding: 30px;
+    border-radius: 25px;
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+}
+
+.container .content .top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.container .content .backButton {
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.arrow {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    /*   border:solid 1px white; */
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.arrow:hover {
+    /*  animation:borderAni 5s cubic-bezier(0, 0.6, 1, 0.4); */
+    border: solid 2px #111;
+    border-radius: 50%;
+}
+
+.arrow:after {
+    position: absolute;
+    display: block;
+    content: "";
+    color: #111;
+    width: 20px;
+    height: 15px;
+    /*   border:solid 1px;  */
+    top: -1px;
+    border-bottom: solid 2px;
+    transform: translatex(4px);
+}
+
+.arrow:before {
+    position: absolute;
+    display: block;
+    content: "";
+    color: #111;
+    width: 8px;
+    height: 8px;
+    /*   border:solid 1px;  */
+    border-top: solid 2px;
+    border-left: solid 2px;
+    top: 50%;
+    left: 2px;
+    transform-origin: 0% 0%;
+    transform: rotatez(-45deg);
+
+}
+
+.arrow:hover:before {
+    animation: aniArrow01 1s cubic-bezier(0, 0.6, 1, 0.4) infinite 0.5s;
+}
+
+.arrow:hover:after {
+    animation: aniArrow02 1s cubic-bezier(0, 0.6, 1, 0.4) infinite 0.5s;
+}
+
+
+@keyframes aniArrow01 {
+    0% {
+        transform: rotatez(-45deg) translateY(30px) translateX(30px);
+    }
+
+    100% {
+        transform: rotatez(-45deg) translateY(-35px) translateX(-35px);
+    }
+}
+
+
+@keyframes aniArrow02 {
+    0% {
+        transform: translateX(45px);
+    }
+
+    100% {
+        transform: translateX(-44px);
+    }
+}
+
+@keyframes borderAni {
+    0% {
+        border: solid 2px #111;
+    }
+
+    100% {
+        border: solid 2px #111;
+        border-radius: 50%;
+    }
+}
+
+.container .content .bottom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.content#item-1 .circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+.content#item-2 .circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+.content#item-3 .circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+
+.content#item-1 .pie-chart {
+    background:
+        radial-gradient(circle closest-side,
+            transparent 100%,
+            var(--background-collor) 0),
+        conic-gradient(#4e79a7 0,
+            var(--content-circle-background-collor) 10%,
+            var(--content-circle-front-background-collor) 0,
+            var(--content-circle-front-background-collor) 100%);
+    position: relative;
+    width: 200px;
+    min-height: 200px;
+    margin: 0;
+    outline: 1px solid #ccc;
+    clip-path: circle();
+}
+.content#item-2 .pie-chart {
+    background:
+        radial-gradient(circle closest-side,
+            transparent 100%,
+            var(--background-collor) 0),
+        conic-gradient(#4e79a7 0,
+            var(--content-circle-background-collor) 47%,
+            var(--content-circle-front-background-collor) 0,
+            var(--content-circle-front-background-collor) 100%);
+    position: relative;
+    width: 200px;
+    min-height: 200px;
+    margin: 0;
+    outline: 1px solid #ccc;
+    clip-path: circle();
+}
+.content#item-3 .pie-chart {
+    background:
+        radial-gradient(circle closest-side,
+            transparent 100%,
+            var(--background-collor) 0),
+        conic-gradient(#4e79a7 0,
+            var(--content-circle-background-collor) 72%,
+            var(--content-circle-front-background-collor) 0,
+            var(--content-circle-front-background-collor) 100%);
+    position: relative;
+    width: 200px;
+    min-height: 200px;
+    margin: 0;
+    outline: 1px solid #ccc;
+    clip-path: circle();
+}
+
+.container .content .bottom .stat {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.container .content .bottom .stat h2:nth-child(1) {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.container .content .bottom .stat p:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.container .content .bottom .stat h2:nth-child(3) {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    color: var(--content-circle-front-background-collor);
+}
+
+.container .content .bottom .stat p:nth-child(4) {
+    margin-bottom: 20px;
+    color: var(--content-circle-front-background-collor);
+}
+
+.toggleContent .toggleBack {
+    position: absolute;
+    background-color: var(--content-back-background-collor);
+    min-width: 540px;
+    min-height: 700px;
+    z-index: -1;
+    border-radius: 25px;
+    border: 1px solid #fff;
+}
+
+.toggleContent .toggleBack h2 {
+    margin: 15px;
+}
+
+.toggleContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.toggleContent .item#first{
+    width: 100%;
+    gap: 100px;
+    border-radius: 15px;
+    padding: 50px;
+    background-color: var(--content-background-collor)
+}
+
+.toggleContent .item#first.active {
+    background-color: #111;
+    color: #fff;
+    display: block;
+    width: 100%;
+}
+.toggleContent .item#second.active {
+    background-color: #111;
+    color: #fff;
+    display: block;
+    width: 100%;
+}
+.toggleContent .item#third.active {
+    background-color: #111;
+    color: #fff;
+    display: block;
+    width: 100%;
+}
+
+.toggleContent .item#second,
+.toggleContent .item#third {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 100px;
+    border-radius: 15px;
+    padding: 50px;
+    background-color: var(--content-background-collor);
+}
+
+.toggleContent .item .left {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.toggleContent .item .right {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.toggleContent .item .right a {
+    margin-top: 20px;
+    color: var(--content-circle-front-background-collor);
+    text-decoration: none;
+}
+
+.toggleContent .item .left .arrow-up-gradient {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-image: linear-gradient(to top, #8e2de2, #4a00e0) 1;
+    margin-bottom: 5px;
+}
+
+.toggleContent .item.active .arrow-up-gradient {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-image: linear-gradient(to top, #8e2de2, #4a00e0) 1;
+    margin-bottom: 5px;
+}
+
+
+@media (max-width:1200px){
+    .container{
+        flex-direction:column-reverse;
+    }
+}
