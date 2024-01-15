@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f7ff;
+}
+
+.back {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e8efff;
+    width: 550px;
+    height: 650px;
+    border-radius: 25px;
+}
+
+.contentBox {
+    position: relative;
+    width: 450px;
+    height: 670px;
+    padding: 50px;
+    border-radius: 25px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    z-index: 1000;
+}
+
+.contentBox h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.contentBox a {
+    color: black;
+    font-weight: 600;
+}
+
+.contentBox p {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 40px;
+}
+
+.contentBox p span {
+    font-weight: 600;
+}
+
+.contentBox p i {
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #e8efff;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.contentBox .btn1 {
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: linear-gradient(rgba(97, 245, 149, 255),
+            rgba(116, 244, 228, 255));
+}
+
+.contentBox .btn1:hover {
+    background: linear-gradient(rgba(255, 245, 149, 255),
+            rgba(255, 244, 228, 255));
+}
+
+.contentBox .btn2 {
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: linear-gradient(rgba(159, 193, 254, 255), rgba(176, 174, 255, 255));
+}
+
+.contentBox .btn2:hover {
+    background: linear-gradient(rgba(255, 193, 254, 255), rgba(176, 255, 255, 255));
+
+}
+
+.contentBox .zipBox {
+    margin-top: 20px;
+    background: #1111;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contentBox .zipBox p {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.contentBox .zipBox .element {
+    display: inline;
+    width: 100%;
+}
+
+.contentBox .zipBox .element input {
+    width: 60%;
+    padding: 20px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 13px;
+}
+
+.contentBox .zipBox .element button {
+    width: 38%;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.contentBox .zipBox .element button:hover {
+    background-color: #cccdd09f;
+}
