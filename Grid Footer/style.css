@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' sans-serif;
+}
+
+:root {
+    --body-color: #f4d9ff;
+    --firstItem-color: #fb896b;
+    --secondItem-color: #fb6b6c;
+    --thirdItem-color: #f1a863;
+    --fourthItem-color: #fbd36a;
+    --fifthItem-color: #475257;
+    --hover-color: #f37252;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--body-color);
+}
+
+.whiteBackground{
+    position: absolute;
+    background-color: #ffffff;
+    width: 1050px;
+    height: 750px;
+    border-radius: 25px;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    max-height: 700px;
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    height: 350px;
+    padding: 75px;
+    color: #ffffff;
+    line-height: 40px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+i{
+    font-size: 30px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.item a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.item .hover:hover {
+    background-color: var(--hover-color);
+    width: 100%;
+    
+}
+
+.item:nth-child(1) {
+    background-color: var(--firstItem-color);
+}
+
+.item:nth-child(2) {
+    background-color: var(--secondItem-color);
+}
+
+.item:nth-child(3) {
+    background-color: var(--thirdItem-color);
+}
+
+.item:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: var(--fourthItem-color);
+    color: var(--fifthItem-color);
+}
+
+.item:nth-child(4) a {
+    color: var(--fifthItem-color);
+}
+
+.item:nth-child(5) {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: var(--fifthItem-color);
+    grid-column: span 2;
+}
+
+.item:nth-child(5) h2{
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.item:nth-child(5) p{
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.item:nth-child(5) button{
+    padding: 13px;
+    cursor: pointer;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Full Page Select</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>select category</h1>
+            <p>Select the category where you want to add these records.</p>
+            <div class="back">
+                2/3
+            </div>
+        </div>
+        <div class="button_plus" id="showDialog"></div>
+        <dialog id="favDialog">
+            <form>
+                <p>
+                    <label>
+                        Favorite animal:
+                        <select>
+                            <option value="default">Choose…</option>
+                            <option>Brine shrimp</option>
+                            <option>Red panda</option>
+                            <option>Spider monkey</option>
+                        </select>
+                    </label>
+                </p>
+                <div>
+                    <button value="cancel" formmethod="dialog">Cancel</button>
+                    <button id="confirmBtn" value="default">Confirm</button>
+                </div>
+            </form>
+        </dialog>
+        <ul>
+            <li>
+                <div class="imgBox">
+                    <img src="https://images.pexels.com/photos/1470171/pexels-photo-1470171.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                </div>
+                <h1>plants</h1>
+                <button>select</button>
+            </li>
+            <li>
+                <div class="imgBox">
+                    <img src="https://images.pexels.com/photos/10949537/pexels-photo-10949537.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                </div>
+                <h1>desserts</h1>
+                <button>select</button>
+            </li>
+            <li>
+                <div class="imgBox">
+                    <img src="https://images.pexels.com/photos/1306262/pexels-photo-1306262.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                </div>
+                <h1>accessories</h1>
+                <button>select</button>
+            </li>
+        </ul>
+        <div class="bottom">
+            <button>continue</button>
+            <div class="left">
+                <div class="gg-arrow-right"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #5b6979;
+}
+
+
+.popup {
+    display: none;
+}
+
+.santa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.santa img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #5b6979;
+    display: grid;
+    grid-template-columns: repeat(2) 1fr;
+    gap: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+}
+
+.container.is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.top {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.top .close-x {
+    display: inline-block;
+    float: right;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    padding: 2px;
+    cursor: pointer;
+    background:
+        linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 43%, #111 45%, #111 55%, rgba(0, 0, 0, 0) 57%, rgba(0, 0, 0, 0) 100%),
+        linear-gradient(135deg, #fff 0%, #fff 43%, #111 45%, #111 55%, #fff 57%, #fff 100%);
+
+}
+
+.top .content {
+    padding: 50px;
+    text-align: center;
+}
+
+.top .content .imgBox {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+}
+
+.top .content .imgBox img {
+    width: 100%;
+    height: 100%;
+}
+
+.top .content .textBox h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+}
+
+.top .content .textBox p {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+
+}
+
+.bottom {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+}
+
+.bottom .text p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #111;
+    line-height: 20px;
+}
+
+.bottom .btn button {
+    border-radius: 25px;
+    padding: 15px 20px;
+    background: #227593;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    border: none;
+}
+
+@media (max-width:900px){
+    .container{
+        width: 500px;
+    }
+}
+
+@media (max-width:583px){
+    .container{
+        width: 400px;
+    }
+}
+

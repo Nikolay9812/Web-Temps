@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a7592;
+    min-height: 100vh;
+}
+.hat{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: -26%;
+    top: -20%;
+    rotate: -16deg;
+}
+
+
+.container {
+    position: relative;
+    padding: 50px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.container i {
+    display: flexbox;
+    float: inline-end;
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid rgb(235, 226, 226);
+    padding: 5px;
+}
+
+.container i:hover {
+    color: #404040 !important;
+    font-weight: 700 !important;
+    padding: 15px;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.3s ease 0s;
+}
+
+.emoji-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.emoji {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border: solid rgb(240, 237, 237);
+}
+
+.emoji img {
+    max-width: 100%;
+    max-height: 100%;
+    mix-blend-mode: multiply;
+    filter: contrast(1.2);
+}
+
+.emoji img:hover {
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.3s ease 0s;
+}
+
+.title {
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.text {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    color: gray;
+}
+
+.input-title {
+    font-weight: 600;
+    padding: 10px;
+}
+
+.feedback {
+    text-align: center;
+}
+
+form {
+    flex-direction: column;
+}
+
+form textarea {
+    height: 100px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border-color: rgb(235, 226, 226);
+    outline: none;
+    resize: none;
+}
+
+form input[type="submit"] {
+    width: fit-content;
+    padding: 15px;
+    border-radius: 30px;
+    background: #1a7592;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    color: #404040 !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.3s ease 0s;
+
+}

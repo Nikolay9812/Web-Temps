@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' sans-serif;
+}
+
+body {
+    background-color: #023c52;
+    height: 100vh;
+}
+
+button {
+    background-color: #daa177;
+    padding: 15px;
+    text-align: center;
+}
+
+.firstCard {
+    position: absolute;
+    top: 25%;
+    left: 32%;
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.firstCard h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.firstCard p {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.firstCard p span {
+    border-bottom: 1px solid #111;
+    cursor: pointer;
+}
+
+.firstCard .content {
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    padding: 20px;
+}
+
+.firstCard .content h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.firstCard .content a {
+    color: #111;
+}
+
+.contentBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked~.checkmark {
+    background-color: #daa177;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.contentBox .price {
+    line-height: 10px;
+    text-align: end;
+}
+
+.contentBox .price p:nth-child(1),
+.contentBox .price p:nth-child(2),
+.contentBox .price p:nth-child(3) {
+    font-weight: 900;
+}
+
+.btnBox {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btnBox button:nth-child(1) {
+    border: none;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btnBox button:nth-child(2) {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    font-size: 18px;
+    color: #daa177;
+    cursor: pointer;
+}
+
+.secondCard {
+    position: absolute;
+    left: 48%;
+    top: 5%;
+    width: 350px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.secondCard .imgBox {
+    width: 200px;
+    height: 200px;
+    clip-path: circle(50%);
+    margin-bottom: 20px;
+}
+
+.secondCard .imgBox img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: 0 -40px;
+}
+
+.secondCard h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.secondCard .btnBox {
+    flex-direction: row-reverse;
+}
+
+.thirdCard {
+    position: absolute;
+    left: 55%;
+    top: 55%;
+    width: 450px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 50px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.thirdCard .item{
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    padding: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.thirdCard .item i{
+    font-size: 20px;
+}
+
+@media(max-width:1300px){
+    .firstCard{
+        top: 30%;
+        left: 15%;
+        
+    }
+
+    .secondCard{
+        top: 10%;
+        left: 45%;
+    }
+
+    .thirdCard{
+        top: 70%;
+        left: 50%;
+    }
+}
+
+@media(max-width:600px){
+
+    .firstCard{
+        top: 2%;
+        left: 11%;
+        width: 450px;
+        
+    }
+
+    .secondCard{
+        top: 67%;
+        left: 11%;
+        width: 450px;
+    }
+
+    .thirdCard{
+        top: 120%;
+        left: 11%;
+    }
+}

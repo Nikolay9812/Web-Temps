@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    background-color: hsl(84, 92%, 71%);
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    min-height: 435px;
+    margin: auto;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.header-section{
+    padding: 25px 0;
+}
+
+.header-section h1{
+    font-weight: 500;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: #14452F;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.header-section p{
+    margin: 5px;
+    font-size: 0.95rem;
+    color: #14452F;
+}
+
+.drop-section{
+    min-height: 250px;
+    border: 1px dashed #9CAF88;
+    background-image: linear-gradient(180deg,white,#F1F6FF);
+    margin: 5px 35px 35px 35px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.drop-section div.col:first-child{
+    opacity: 1;
+    visibility: visible;
+    transition-duration: 0.2s;
+    transform: scale(1);
+    width: 200px;
+    margin: auto;
+}
+
+.drop-section div.col:last-child{
+    font-size: 40px;
+    font-weight: 700;
+    color: #25A18E;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+    height: 55px;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.6);
+    transition-duration: 0.2s;
+}
+
+/* We will use drag-over-effect in js */
+.drag-over-effect div.col:first-child{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(1.1);
+}
+
+.drag-over-effect div.col:last-child{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.drop-section .cloud-icon{
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.drop-section span,
+.drop-section button{
+    display: block;
+    margin: auto;
+    color: #14452F;
+    margin-bottom: 10px;
+}
+
+.drop-section button{
+    color: white;
+    background-color: #14452F;
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.drop-section input{
+    display: none;
+}
+
+.list-section{
+    display: none;
+    text-align: left;
+    margin: 0 35px;
+    padding-bottom: 20px;
+}
+
+.list-section .list-title{
+    font-size: 0.95rem;
+    color: #14452F;
+}
+
+.list-section li{
+    display: flex;
+    margin: 15px 0;
+    padding: 4px;
+    padding-bottom: 2px;
+    border-radius: 8px;
+    transition-duration: 0.2s;
+}
+.list-section li:hover{
+    box-shadow: #E3EAD9 0 0 4px 0, 0 12px 16px 0 #E3EAD9
+}
+
+.list-section li .col{
+    flex: .1;
+}
+
+.list-section li .col:nth-child(1){
+    flex: .15;
+    text-align: center;
+}
+
+.list-section li .col:nth-child(2){
+    flex: .75;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #3e4046;
+    padding: 8px 10px;
+}
+
+.list-section li .col:nth-child(2) div.name{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 250px;
+    display: inline-block;
+}
+
+.list-section li .col .file-name span{
+    color: #14452F;
+    float: right;
+}
+
+.list-section li .file-progress{
+    width: 100%;
+    height: 5px;
+    margin-top: 8px;
+    border-radius: 8px;
+    background-color: #dee6fd;
+}
+
+.list-section li .file-progress span{
+    display: block;
+    width: 0%;
+    height: 100%;
+    border-radius: 8px;
+    background-image: linear-gradient(120deg,#14452F,#9FFFCB);
+    transition-duration: 0.4s;
+}
+
+.list-section li .col .file-size{
+    font-size: 0.75rem;
+    margin-top: 3px;
+    color: #14452F;
+}
+
+.list-section li .col svg.cross,
+.list-section li .col svg.tick{
+    fill: #1b551f;
+    background-color: #dee6fd;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+
+.list-section li .col svg.tick{
+    fill: #50a156;
+    background-color: transparent;
+}
+
+.list-section li.complete span,
+.list-section li.complete .file-progress,
+.list-section li.complete svg.cross{
+    display: none;
+}
+
+.list-section li.in-prog .file-size,
+.list-section li.in-prog svg.tick{
+    display: none;
+}
