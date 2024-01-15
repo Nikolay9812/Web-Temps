@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+:root {
+    --first-color: rgba(23, 16, 60, 255);
+    --second-color: rgba(214, 235, 232, 255);
+    --third-color: rgba(195, 224, 216, 255);
+    --fourth-color: rgba(221, 235, 231, 255);
+    --fifth-color: rgba(255, 165, 147, 255);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--first-color);
+}
+
+h1{
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #222;
+    font-size: 45px;
+}
+h2{
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #222;
+    font-size: 35px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr repeat(2, 0) 3fr 4fr;
+    grid-template-rows: 3fr repeat(2, 0) 3fr 0;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    max-width: 1200px;
+    border-radius: 10px;
+    padding: 100px;
+    background-color: var(--second-color);
+}
+
+.container .element {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    line-height: 30px;
+    color: #555;
+}
+
+.container .element .context {
+    max-width: 100%;
+    font-size: 20px;
+}
+
+.element:nth-child(1) {
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+.element:nth-child(2) {
+    grid-area: 1 / 3 / 3 / 5;
+}
+
+.element:nth-child(3) {
+    grid-area: 3 / 1 / 5 / 3;
+}
+
+.element:nth-child(3)  {
+    grid-area: 3 / 1 / 5 / 3;
+    text-align: start;
+}
+.element:nth-child(3) a {
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #555;
+}
+
+.element:nth-child(3) a:hover {
+    background-color: var(--third-color);
+}
+
+.element:nth-child(4) {
+    grid-area: 3 / 3 / 5 / 5;
+    background-color: var(--third-color);
+}
+
+.element:nth-child(5) {
+    grid-area: 1 / 5 / 5 / 6;
+    background-color: var(--fourth-color);
+    border: 1px solid rgb(250, 245, 245);
+}
+
+button{
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--fifth-color);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 1000;
+    margin-top: 110px;
+}

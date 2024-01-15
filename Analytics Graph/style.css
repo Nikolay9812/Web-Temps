@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #111841;
+}
+
+.container {
+    min-width: 50%;
+    min-height: 50%;
+    background-color: #171e52;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.container .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #151b4b;
+    width: 100%;
+    color: #fff;
+    padding: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.container .context {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    color: #fff;
+}
+
+.container .context .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+}
+
+.container .context .left .pie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle closest-side,
+            transparent 100%,
+            white 0),
+        conic-gradient(
+            #ba68c8 0,
+            #ba68c8 41%,
+            #ea417c 0,
+            #ea417c 70%,
+            #ec6e00 0,
+            #ec6e00 93%,
+            #fdd83e 0,
+            #fdd83e 97%,
+            #67f1b0 0,
+            #67f1b0 100%)
+}
+
+.container .context .left .pie-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-color: #171e52;
+}
+
+.container .context .left .pie h1 {
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.container .context .left .pie h2 {
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.container .context .right {
+    width: 100%;
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.container .context .right p:nth-child(1) span {
+    border-radius: 15px;
+    padding: 0 15px;
+    background-color: #ba68c8;
+    color: #111;
+}
+
+.container .context .right p:nth-child(2) span {
+    border-radius: 15px;
+    padding: 0 15px;
+    background-color: #ea417c;
+    color: #111;
+}
+
+.container .context .right p:nth-child(3) span {
+    border-radius: 15px;
+    padding: 0 15px;
+    background-color: #ec6e00;
+    color: #111;
+}
+
+.container .context .right p:nth-child(4) span {
+    border-radius: 15px;
+    padding: 0 15px;
+    background-color: #fdd83e;
+    color: #111;
+}
+
+.container .context .right p:nth-child(5) span {
+    border-radius: 15px;
+    padding: 0 15px;
+    background-color: #67f1b0;
+    color: #111;
+}
