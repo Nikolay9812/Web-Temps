@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-background: #252531;
+    --icon-background: #e95580;
+    --first-element-background: #57aefe;
+    --second-element-background: #fe8157;
+    --third-element-background: #ffb658;
+    --fourth-element-background: #b158ff;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--main-background);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    width: 1400px;
+    height: 990px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px 40px;
+}
+
+.container nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+
+}
+
+.container nav li:nth-child(3)::before {
+    content: '●';
+    float: right;
+    margin-left: 0.6rem;
+    color: red;
+}
+
+.active,
+.path:hover {
+    font-weight: 800;
+}
+
+.container nav div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.container nav div a {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 7px 20px;
+}
+
+.container nav div a:hover {
+    background-color: aliceblue;
+}
+
+.container nav div .userIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--icon-background);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.container .box {
+    display: flex;
+    margin-top: 30px;
+}
+
+.container .projects {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 30px;
+    background-color: var(--main-background);
+    width: 290px;
+    height: 850px;
+    border-radius: 25px;
+    color: #fff;
+}
+
+.container .projects .list {
+    line-height: 40px;
+}
+
+.container .projects .list p {
+    text-transform: uppercase;
+    color: #888;
+    margin-left: -0.1rem;
+}
+
+.container .projects .list ul li {
+    list-style-type: none;
+    position: relative;
+    margin-left: 0.8rem;
+    /* It's needed for setting position to absolute in the next rule. */
+}
+
+.container .projects .list ul li::before {
+    content: '●';
+    position: absolute;
+    left: -0.8em;
+    bottom: 1px;
+    /* Adjust this value so that it appears where you want. */
+    font-size: 1.1em;
+    /* Adjust this value so that it appears what size you want. */
+}
+
+.container .projects p a {
+    color: var(--first-element-background);
+    margin-left: 0.8rem;
+}
+
+.container .projects p .arrow {
+    border: solid var(--first-element-background);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.container .projects .teams .teams-title {
+    text-transform: uppercase;
+    color: #888;
+    margin-left: -0.1rem;
+    margin-bottom: 15px;
+}
+
+.container .projects .teams div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #393c52;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.container .projects .teams div .first {
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-left: -1rem;
+}
+
+.container .projects .teams div .second {
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-left: 0.1rem;
+}
+
+.container .projects .teams div button {
+    background-color: #fff;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.container .projects .teams div button:hover {
+    background-color: var(--main-background);
+    color: white;
+}
+
+.box .context {
+    padding: 10px 30px;
+}
+
+.box .context h2 {
+    font-weight: 400;
+}
+
+.box .context .elements {
+    width: 1000px;
+    max-height: 800px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1rem);
+    list-style: none;
+    column-gap: 180px;
+    row-gap: 20px;
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+    overflow-y: scroll;
+}
+
+.box .context .elements::-webkit-scrollbar {
+    display: none;
+  }
+
+.box .context .elements .element .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    color: #fff;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 15px;
+    background: #111;
+}
+
+.box .context .elements .element .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    text-align: center;
+
+}
+
+.box .context .elements .element {
+    position: relative;
+}
+
+.box .context .elements .element .setings {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 150px;
+    gap: 5px;
+}
+
+.box .context .elements .element button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 0.6rem;
+}
+
+.box .context .elements .element:hover .setings {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.box .context .elements .element:nth-child(1) .icon {
+    background-color: var(--first-element-background);
+}
+
+.box .context .elements .element:nth-child(2) .icon {
+    background-color: var(--second-element-background);
+}
+
+.box .context .elements .element:nth-child(3) .icon {
+    background-color: var(--third-element-background);
+}
+
+.box .context .elements .element:nth-child(4) .icon {
+    background-color: var(--fourth-element-background);
+}
+
+.box .context .elements .element:nth-child(5) .icon {
+    background-color: #ff3658;
+}
+
+.box .context .elements .element:nth-child(6) .icon {
+    background-color: #28a91d;
+}
+
+.box .context .elements .element:nth-child(7) .icon {
+    background-color: #a536ff;
+}
+
+.box .context .elements .element:nth-child(8) .icon {
+    background-color: #fffc36;
+}
+
+.box .context .elements .element:nth-child(9) .icon {
+    background-color: #6f36ff;
+}
+
+.box .context .elements .element:nth-child(10) .icon {
+    background-color: #36f8ff;
+}
+
+.box .context .elements .element:nth-child(11) .icon {
+    background-color: #ff3665;
+}
+
+.box .context .elements .element-add .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    font-weight: 200;
+    color: #111;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.box .context .elements .element-add .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    text-align: center;
+
+}
+
+.container .privacy {
+    position: absolute;
+    right: 27rem;
+    bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container .privacy div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+.container .privacy div:first-child p {
+    margin-bottom: 1rem;
+}
+
+.container .privacy div:hover {
+    background-color: rgb(202, 224, 244);
+}
