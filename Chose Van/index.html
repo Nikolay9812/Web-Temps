@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class=" vehicles" id="work">
+        <div class="circle"></div>
+        <div class="vehicles-content">
+            <div class="vehicles-textBox">
+                <h2>We gona write something<br>Its <span>Not shure what</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dicta est
+                    ipsa ducimus minus repellendus
+                    enim possimus accusantium, aspernatur unde animi blanditiis
+                    reprehenderit id nisi labore quae
+                    obcaecati
+                    quia incidunt.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="vehicles-imgBox">
+                <img src="vehicle1.png" class="van">
+            </div>
+        </div>
+        <ul class="vehicles-thumb">
+            <li><img src="vehicle-thumb1.png" onclick="imgSlider('vehicle1.png');changeCircleColor('#017143')"></li>
+            <li><img src="vehicle-thumb2.png" onclick="imgSlider('vehicle2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="vehicle-thumb3.png" onclick="imgSlider('vehicle3.png');changeCircleColor('#d752b1')"></li>
+            <li><img src="vehicle-thumb4.png" onclick="imgSlider('vehicle4.png');changeCircleColor('#2752b1')"></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.van').src = anything;
+        }
+
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+</html>

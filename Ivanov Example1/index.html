@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Ivanov Transport</a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#service" onclick="toggleMenu()">Service</a></li>
+            <li><a href="#work" onclick="toggleMenu()">Work</a></li>
+            <li><a href="#testimonial" onclick="toggleMenu()">Testimonial</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </header>
+
+    <body>
+        <section class="home-section">
+            <div class="home-container">
+                <div class="home-left">
+                    <div class="content">
+                        <h2>Ride With <br><span>Ivanov Transport</span></h2>
+                        <h3>You are motivation!</h3>
+                        <a href="#apply" class="btn">Apply Now</a>
+                    </div>
+                </div>
+                <div class="home-right">
+                    <div class="home-box">
+                        <div class="home-decor"></div>
+                        <div class="home-img-box1">
+                            <img src="left-driver.jpg">
+                        </div>
+                        <div class="home-img-box2">
+                            <img src="right-driver.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="applySection" id="#apply">
+            <div class="container">
+                <div class="contactInfo">
+                    <div>
+                        <h2>Contact Info</h2>
+                        <ul class="info">
+                            <li>
+                                <span><img src="location.png" alt=""></span>
+                                <span>
+                                    adres<br>
+                                    adres<br>
+                                    adres
+                                </span>
+                            </li>
+                            <li>
+                                <span><img src="mail.png" alt=""></span>
+                                <span>nqkakavsi@mail.com</span>
+                            </li>
+                            <li>
+                                <span><img src="call.png" alt=""></span>
+                                <span>+49 543 534 4545</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="sci">
+                        <li><a href="#"><img src="1.png" alt=""></a></li>
+                        <li><a href="#"><img src="2.png" alt=""></a></li>
+                        <li><a href="#"><img src="3.png" alt=""></a></li>
+                        <li><a href="#"><img src="4.png" alt=""></a></li>
+                        <li><a href="#"><img src="5.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="contactForm">
+                    <h2>Send a Message</h2>
+                    <div class="formBox">
+                        <div class="inputBox w50">
+                            <input type="text" required>
+                            <span>First Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" required>
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="email" required>
+                            <span>Email Address</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" required>
+                            <span>Mobile Number</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <textarea required></textarea>
+                            <span>Write your message here...</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About us</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia laudantium quidem at
+                        tempore a totam distinctio reprehenderit omnis itaque sapiente nemo, odit expedita ducimus
+                        architecto ea eum quos nulla!</p>
+                </div>
+                <div class="about-imgBox">
+                    <img src="about.jpg">
+                </div>
+            </div>
+        </section>
+        <script type="text/javascript">
+            window.addEventListener('scroll', function () {
+                var header = document.querySelector('header')
+                header.classList.toggle('sticky', window.scrollY > 0)
+            })
+
+            function toggleMenu() {
+                var menuToggle = document.querySelector('.toggle')
+                var menu = document.querySelector('.menu')
+                menuToggle.classList.toggle('active')
+                menu.classList.toggle('active')
+            }
+        </script>
+    </body>
+
+</html>

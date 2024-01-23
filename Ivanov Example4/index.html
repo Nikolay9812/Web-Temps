@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Ivanov Transport</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Ivanov Transport</a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#service" onclick="toggleMenu()">Service</a></li>
+            <li><a href="#work" onclick="toggleMenu()">Work</a></li>
+            <li><a href="#testimonial" onclick="toggleMenu()">Testimonial</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </header>
+    <section class="home" id="home">
+        <div class="textBx">
+            <h2>Hello We are <br><span>ZP Transport</span></h2>
+            <h3>We are transport firma.</h3>
+            <a href="#about" class="btn">About Us</a>
+        </div>
+    </section>
+    <section class="hero" id="about">
+        <div class="hero-container">
+            <h2 class="hero-title">Ivanov Transport</h2>
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="img1.jpg" alt="">
+                </div>
+                <div class="hero-text">
+                    <h3>Some title</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum illum deleniti iste saepe dolorem
+                        ipsum
+                        nulla voluptatum repellat, numquam quod non, ducimus eius sed maxime recusandae. Perferendis
+                        excepturi voluptate eveniet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="card-section" id="service">
+        <div class="card-container">
+            <div class="card">
+                <div class="card-content">
+                    <h2>01</h2>
+                    <h3>Card One</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti perferendis asperiores
+                        voluptatum, labore quod alias magni ipsa earum ad.
+                    </p>
+                    <button class="modal-open" data-modal="modal1">Read More</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h2>02</h2>
+                    <h3>Card Two</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti perferendis asperiores
+                        voluptatum, labore quod alias magni ipsa earum ad.
+                    </p>
+                    <button class="modal-open" data-modal="modal2">Read More</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h2>03</h2>
+                    <h3>Card Three</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti perferendis asperiores
+                        voluptatum, labore quod alias magni ipsa earum ad.
+                    </p>
+                    <button class="modal-open" data-modal="modal3">Read More</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal1">
+            <div class="modal-content">
+                <h2>Lorem ipsum dolor sit, amet consectetur 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque similique doloribus illum odio
+                    reprehenderit rerum recusandae, at nobis commodi error excepturi pariatur temporibus esse ducimus
+                    veritatis tempore sit repellat.</p>
+                <button class="modal-close">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="modal2">
+            <div class="modal-content">
+                <h2>Lorem ipsum dolor sit, amet consectetur 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque similique doloribus illum odio
+                    reprehenderit rerum recusandae, at nobis commodi error excepturi pariatur temporibus esse ducimus
+                    veritatis tempore sit repellat.</p>
+                <button class="modal-close">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="modal3">
+            <div class="modal-content">
+                <h2>Lorem ipsum dolor sit, amet consectetur 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque similique doloribus illum odio
+                    reprehenderit rerum recusandae, at nobis commodi error excepturi pariatur temporibus esse ducimus
+                    veritatis tempore sit repellat.</p>
+                <button class="modal-close">Close</button>
+            </div>
+        </div>
+    </section>
+    <section class=" vehicles" id="work">
+        <div class="circle"></div>
+        <div class="vehicles-content">
+            <div class="vehicles-textBox">
+                <h2>We gona write something<br>Its <span>Not shure what</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dicta est
+                    ipsa ducimus minus repellendus
+                    enim possimus accusantium, aspernatur unde animi blanditiis
+                    reprehenderit id nisi labore quae
+                    obcaecati
+                    quia incidunt.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="vehicles-imgBox">
+                <img src="vehicle1.png" class="van">
+            </div>
+        </div>
+        <ul class="vehicles-thumb">
+            <li><img src="vehicle-thumb1.png" onclick="imgSlider('vehicle1.png');changeCircleColor('#017143')"></li>
+            <li><img src="vehicle-thumb2.png" onclick="imgSlider('vehicle2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="vehicle-thumb3.png" onclick="imgSlider('vehicle3.png');changeCircleColor('#d752b1')"></li>
+            <li><img src="vehicle-thumb4.png" onclick="imgSlider('vehicle4.png');changeCircleColor('#2752b1')"></li>
+        </ul>
+    </section>
+    <section class="testimonial" id="testimonial">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="quote.png" class="quote">
+                        <div class="testimonial-content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tenetur natus aliquid
+                                minima numquam ipsa. Omnis est libero, quidem hic quos voluptatum eaque, ipsam facere
+                                aut id repudiandae praesentium modi.</p>
+                        </div>
+                        <div class="details">
+                            <div class="details-imgBox">
+                                <img src="harry.png">
+                            </div>
+                            <h3>Someon Famous<br><span>Harry Potter</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="quote.png" class="quote">
+                        <div class="testimonial-content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tenetur natus aliquid
+                                minima numquam ipsa. Omnis est libero, quidem hic quos voluptatum eaque, ipsam facere
+                                aut id repudiandae praesentium modi.</p>
+                        </div>
+                        <div class="details">
+                            <div class="details-imgBox">
+                                <img src="harry.png">
+                            </div>
+                            <h3>Someon Famous<br><span>Harry Potter</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="quote.png" class="quote">
+                        <div class="testimonial-content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tenetur natus aliquid
+                                minima numquam ipsa. Omnis est libero, quidem hic quos voluptatum eaque, ipsam facere
+                                aut id repudiandae praesentium modi.</p>
+                        </div>
+                        <div class="details">
+                            <div class="details-imgBox">
+                                <img src="harry.png">
+                            </div>
+                            <h3>Someon Famous<br><span>Harry Potter</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="quote.png" class="quote">
+                        <div class="testimonial-content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tenetur natus aliquid
+                                minima numquam ipsa. Omnis est libero, quidem hic quos voluptatum eaque, ipsam facere
+                                aut id repudiandae praesentium modi.</p>
+                        </div>
+                        <div class="details">
+                            <div class="details-imgBox">
+                                <img src="harry.png">
+                            </div>
+                            <h3>Someon Famous<br><span>Harry Potter</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="quote.png" class="quote">
+                        <div class="testimonial-content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tenetur natus aliquid
+                                minima numquam ipsa. Omnis est libero, quidem hic quos voluptatum eaque, ipsam facere
+                                aut id repudiandae praesentium modi.</p>
+                        </div>
+                        <div class="details">
+                            <div class="details-imgBox">
+                                <img src="harry.png">
+                            </div>
+                            <h3>Someon Famous<br><span>Harry Potter</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="quote.png" class="quote">
+                        <div class="testimonial-content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tenetur natus aliquid
+                                minima numquam ipsa. Omnis est libero, quidem hic quos voluptatum eaque, ipsam facere
+                                aut id repudiandae praesentium modi.</p>
+                        </div>
+                        <div class="details">
+                            <div class="details-imgBox">
+                                <img src="harry.png">
+                            </div>
+                            <h3>Someon Famous<br><span>Harry Potter</span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="heading">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="content">
+            <div class="contactInfo">
+                <h3>Contact Info</h3>
+                <div class="contactInfoBx">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>Kunststraße 26,<br>68161 Mannheim,<br>Germany</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>555-333-1245</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>grundalin@gmail,com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formBx">
+                <form action="form-handler.php" method="post">
+                    <h3>Message Us</h3>
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+        <div class="media-icons">
+            <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+        </div>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.van').src = anything;
+        }
+
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+        window.addEventListener('scroll', function () {
+            var header = document.querySelector('header')
+            header.classList.toggle('sticky', window.scrollY > 0)
+        })
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle')
+            var menu = document.querySelector('.menu')
+            menuToggle.classList.toggle('active')
+            menu.classList.toggle('active')
+        }
+    </script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+        VanillaTilt.init(document.querySelectorAll(".title"), {
+            max: 10,
+            speed: 100,
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper-container", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true,
+            },
+            loop: true
+        });
+    </script>
+    <script type="text/javascript">
+        var modalBtns = document.querySelectorAll('.modal-open')
+
+        modalBtns.forEach(function (btn) {
+            btn.onclick = function () {
+                var modal = btn.getAttribute('data-modal')
+
+                document.getElementById(modal).style.display = "block"
+            }
+        })
+
+        var closeBtns = document.querySelectorAll('.modal-close')
+
+        closeBtns.forEach(function (btn) {
+            btn.onclick = function () {
+                var modal = btn.closest('.modal').style.display = 'none'
+            }
+        })
+
+        window.onclick = function (e) {
+            if (e.target.className === 'modal') {
+                e.target.style.display = 'none'
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({
+            //reset: true,
+            distance: '80px',
+            duration: 2500,
+            delay: 400,
+        });
+
+
+        ScrollReveal().reveal('.home h2', { delay: 400, origin: 'left' });
+        ScrollReveal().reveal('.home h2 span', { delay: 600, origin: 'left' });
+        ScrollReveal().reveal('.home h3', { delay: 800, origin: 'left' });
+        ScrollReveal().reveal('.btn', { delay: 1000, origin: 'left' });
+        ScrollReveal().reveal('.textBx', { delay: 100, origin: 'left' });
+
+        ScrollReveal().reveal('.hero-title', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.hero-image', { delay: 600, origin: 'bottom' });
+        ScrollReveal().reveal('.hero-text', { delay: 700, origin: 'right' });
+
+        ScrollReveal().reveal('.card', { delay: 500, origin: 'right',interval: 200});
+
+        ScrollReveal().reveal('.vehicles-thumb', { delay: 500, origin: 'left'});
+        ScrollReveal().reveal('.vehicles-textBox', { delay: 600, origin: 'left',});
+        ScrollReveal().reveal('.vehicles-imgBox', { delay: 700, origin: 'right',});
+
+        ScrollReveal().reveal('.swiper-container', { delay: 700, origin: 'right'});
+
+        ScrollReveal().reveal('.heading', { delay: 700, origin: 'left',});
+        ScrollReveal().reveal('.contactInfo h3', { delay: 600, origin: 'left',});
+        ScrollReveal().reveal('.contactInfoBx .box', { delay: 500, origin: 'left',interval: 200});
+        ScrollReveal().reveal('.media-icons a', { delay: 500, origin: 'right',interval: 200});
+        ScrollReveal().reveal('.formBx form h3', { delay: 500, origin: 'right'});
+        ScrollReveal().reveal('.formBx form input', { delay: 500, origin: 'right',interval: 200});
+        ScrollReveal().reveal('.formBx form textarea', { delay: 500, origin: 'right',interval: 200});
+    </script>
+</body>
+
+</html>
