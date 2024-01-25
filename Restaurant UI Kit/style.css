@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: aliceblue;
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1f2125;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 1s;
+}
+
+.container:nth-child(2) {
+    top: 20%;
+    left: 52%;
+}
+
+.container:nth-child(3) {
+    top: 58%;
+    left: 50%;
+}
+
+.containerResturant {
+    transition: all 1s;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+.containerResturant .resturant {
+    position: relative;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #1f2125;
+}
+
+.containerResturant .resturant .resturantTitle {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+    letter-spacing: 0.1rem;
+}
+
+.containerResturant .resturant .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #111;
+    letter-spacing: 0.01rem;
+}
+
+.containerResturant .resturant .content .imgBox {
+    width: 150px;
+    height: 110px;
+
+}
+
+.containerResturant .resturant .content .imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.containerResturant .resturant .content .text {
+    padding: 10px;
+}
+
+.containerResturant .resturant .content .text .title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.containerResturant .resturant .content .text .title p {
+    margin-left: 0.4rem;
+}
+
+.containerResturant .resturant .content .text .title .star {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.containerResturant .resturant .content .text .addres {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.containerResturant .resturant .content .text .addres,
+.containerResturant .resturant .content .text .open {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.containerResturant .resturant .content .text .addres p,
+.containerResturant .resturant .content .text .open p {
+    margin-left: 0.5rem;
+}
+
+.containerResturant .resturant .content .text .addres svg {
+    margin-bottom: 0.6rem;
+}
+
+.containerResturant .resturant .content .text .open span {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.containerResturant button {
+    cursor: pointer;
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+    background-color: #ffb206;
+    width: 70%;
+    padding: 20px;
+    border-radius: 25px;
+    letter-spacing: 0.1rem;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.containerResturant button:active {
+    background: #b78720;
+}
+
+
+.container .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.221);
+}
+
+.container .header p {
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.container .header .arrow {
+    border: solid #ffb206;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 7px;
+    cursor: pointer;
+    margin-right: 0.4rem;
+}
+
+.container .header .arrow:active {
+    opacity: .2;
+}
+
+.container .header .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transition: all 0.5s;
+}
+
+.container .header .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-bottom: 0.3rem;
+    transition: all 0.5s;
+}
+
+.container .header .currency {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.container .numbers {
+    margin-left: -20px;
+    display: grid;
+    grid-template-columns: repeat(8, 1rem);
+    grid-row-gap: 10px;
+    grid-column-gap: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+
+}
+
+.container .header {
+    transition-delay: 1.3s ease-out;
+}
+
+.container .numbers a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.active,
+a:hover {
+    background-color: #ffb206;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.container .numbers a:hover {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffb206;
+    color: #fff;
+}
+
+.container .more {
+    width: 100%;
+    font-size: 16px;
+    color: #ffb206;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container .timeHeader {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.221);
+}
+
+.container .timeHeader p {
+    margin-left: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.01rem;
+}
+
+.container .timeChose {
+    margin-left: -140px;
+    display: grid;
+    grid-template-columns: repeat(3, 1rem);
+    grid-row-gap: 20px;
+    grid-column-gap: 140px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+}
+
+.container .timeChose a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 0.01rem;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 25px;
+    width: 110px;
+}
+
+.container .timeChose a:hover {
+    background-color: #ffb206;
+    font-weight: 700;
+}
+
+.timeChose .activeTime,
+.a:hover {
+    background-color: #ffb206;
+    color: #fff;
+    border-radius: 50%;
+}
+
+@media(max-width:1900px) {
+
+    .container:nth-child(2) {
+        top: 200px;
+        left: 1320px;
+    }
+
+    .container:nth-child(3) {
+        top: 640px;
+        left: 820px;
+    }
+
+    .containerResturant {
+        top: 220px;
+        left: 720px;
+    }
+}
+
+@media(max-width:1200px) {
+
+    .container:nth-child(2) {
+        top: 60%;
+        left: 40%;
+    }
+
+    .container:nth-child(3) {
+        top: 35%;
+        left: 2%;
+    }
+
+    .containerResturant {
+        top: 15%;
+        left: 50%;
+    }
+}
+
+@media(max-width:600px) {
+
+    .container:nth-child(2) {
+        top: 400px;
+        left: 20px;
+    }
+
+    .container:nth-child(3) {
+        top: 780px;
+        left: 20px;
+    }
+
+    .containerResturant {
+        top: 20px;
+        left: 20px;
+    }
+}
