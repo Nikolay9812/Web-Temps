@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Landing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="home">
+        <div class="page">
+            <nav>
+                <div id="marker"></div>
+                <label for="radio1Page">Home</label>
+                <label for="radio2Page">About</label>
+                <label for="radio3Page">Exhibits</label>
+                <label for="radio4Page">GroupVisits</label>
+                <label for="radio5Page">Contact</label>
+            </nav>
+            <div class="container">
+                <div class="header">
+                    <div class="logoBox">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZRJbh0jM8atEHgt_nkRYisuKFgXuWym4nhQ&usqp=CAU">
+                    </div>
+                    <div class="menu">
+                        <input type="checkbox" id="toggle" />
+                        <label for="toggle" id="show-menu">
+                            <div class="btn">
+                                <div class="menuBtn"><svg class="w-12 h-12" enable-background="new 0 0 512 512"
+                                        viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="256" cy="256" fill="#f0f0f0" r="256" />
+                                        <g fill="#0052b4">
+                                            <path
+                                                d="m52.92 100.142c-20.109 26.163-35.272 56.318-44.101 89.077h133.178z" />
+                                            <path
+                                                d="m503.181 189.219c-8.829-32.758-23.993-62.913-44.101-89.076l-89.075 89.076z" />
+                                            <path
+                                                d="m8.819 322.784c8.83 32.758 23.993 62.913 44.101 89.075l89.074-89.075z" />
+                                            <path
+                                                d="m411.858 52.921c-26.163-20.109-56.317-35.272-89.076-44.102v133.177z" />
+                                            <path
+                                                d="m100.142 459.079c26.163 20.109 56.318 35.272 89.076 44.102v-133.176z" />
+                                            <path
+                                                d="m189.217 8.819c-32.758 8.83-62.913 23.993-89.075 44.101l89.075 89.075z" />
+                                            <path
+                                                d="m322.783 503.181c32.758-8.83 62.913-23.993 89.075-44.101l-89.075-89.075z" />
+                                            <path
+                                                d="m370.005 322.784 89.075 89.076c20.108-26.162 35.272-56.318 44.101-89.076z" />
+                                        </g>
+                                        <g fill="#d80027">
+                                            <path
+                                                d="m509.833 222.609h-220.44-.001v-220.442c-10.931-1.423-22.075-2.167-33.392-2.167-11.319 0-22.461.744-33.391 2.167v220.44.001h-220.442c-1.423 10.931-2.167 22.075-2.167 33.392 0 11.319.744 22.461 2.167 33.391h220.44.001v220.442c10.931 1.423 22.073 2.167 33.392 2.167 11.317 0 22.461-.743 33.391-2.167v-220.44-.001h220.442c1.423-10.931 2.167-22.073 2.167-33.392 0-11.317-.744-22.461-2.167-33.391z" />
+                                            <path
+                                                d="m322.783 322.784 114.236 114.236c5.254-5.252 10.266-10.743 15.048-16.435l-97.802-97.802h-31.482z" />
+                                            <path
+                                                d="m189.217 322.784h-.002l-114.235 114.235c5.252 5.254 10.743 10.266 16.435 15.048l97.802-97.804z" />
+                                            <path
+                                                d="m189.217 189.219v-.002l-114.236-114.237c-5.254 5.252-10.266 10.743-15.048 16.435l97.803 97.803h31.481z" />
+                                            <path
+                                                d="m322.783 189.219 114.237-114.238c-5.252-5.254-10.743-10.266-16.435-15.047l-97.802 97.803z" />
+                                        </g>
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                    </svg></div>
+                                <div class="closeBtn"><svg class="w-12 h-12" enable-background="new 0 0 512 512"
+                                        viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="256" cy="256" fill="#f0f0f0" r="256" />
+                                        <g fill="#0052b4">
+                                            <path
+                                                d="m52.92 100.142c-20.109 26.163-35.272 56.318-44.101 89.077h133.178z" />
+                                            <path
+                                                d="m503.181 189.219c-8.829-32.758-23.993-62.913-44.101-89.076l-89.075 89.076z" />
+                                            <path
+                                                d="m8.819 322.784c8.83 32.758 23.993 62.913 44.101 89.075l89.074-89.075z" />
+                                            <path
+                                                d="m411.858 52.921c-26.163-20.109-56.317-35.272-89.076-44.102v133.177z" />
+                                            <path
+                                                d="m100.142 459.079c26.163 20.109 56.318 35.272 89.076 44.102v-133.176z" />
+                                            <path
+                                                d="m189.217 8.819c-32.758 8.83-62.913 23.993-89.075 44.101l89.075 89.075z" />
+                                            <path
+                                                d="m322.783 503.181c32.758-8.83 62.913-23.993 89.075-44.101l-89.075-89.075z" />
+                                            <path
+                                                d="m370.005 322.784 89.075 89.076c20.108-26.162 35.272-56.318 44.101-89.076z" />
+                                        </g>
+                                        <g fill="#d80027">
+                                            <path
+                                                d="m509.833 222.609h-220.44-.001v-220.442c-10.931-1.423-22.075-2.167-33.392-2.167-11.319 0-22.461.744-33.391 2.167v220.44.001h-220.442c-1.423 10.931-2.167 22.075-2.167 33.392 0 11.319.744 22.461 2.167 33.391h220.44.001v220.442c10.931 1.423 22.073 2.167 33.392 2.167 11.317 0 22.461-.743 33.391-2.167v-220.44-.001h220.442c1.423-10.931 2.167-22.073 2.167-33.392 0-11.317-.744-22.461-2.167-33.391z" />
+                                            <path
+                                                d="m322.783 322.784 114.236 114.236c5.254-5.252 10.266-10.743 15.048-16.435l-97.802-97.802h-31.482z" />
+                                            <path
+                                                d="m189.217 322.784h-.002l-114.235 114.235c5.252 5.254 10.743 10.266 16.435 15.048l97.802-97.804z" />
+                                            <path
+                                                d="m189.217 189.219v-.002l-114.236-114.237c-5.254 5.252-10.266 10.743-15.048 16.435l97.803 97.803h31.481z" />
+                                            <path
+                                                d="m322.783 189.219 114.237-114.238c-5.252-5.254-10.743-10.266-16.435-15.047l-97.802 97.803z" />
+                                        </g>
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                        <g />
+                                    </svg></div>
+                            </div>
+                            <div class="btn"><svg class="w-12 h-12" enable-background="new 0 0 512 512"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="256" cy="256" fill="#d80027" r="256" />
+                                    <path
+                                        d="m389.565 211.479h-89.043v-89.044h-89.044v89.044h-89.043v89.043h89.043v89.043h89.044v-89.043h89.043z"
+                                        fill="#f0f0f0" />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                </svg></div>
+                            <div class="btn"><svg class="w-12 h-12" enable-background="new 0 0 512 512"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="256" cy="256" fill="#ffda44" r="256" />
+                                    <g fill="#0052b4">
+                                        <path
+                                            d="m200.349 222.609h309.484c-16.363-125.607-123.766-222.609-253.833-222.609-19.114 0-37.733 2.113-55.652 6.085v216.524z" />
+                                        <path
+                                            d="m133.565 222.608v-191.481c-70.294 38.354-120.615 108.705-131.398 191.482h131.398z" />
+                                        <path
+                                            d="m133.564 289.391h-131.397c10.783 82.777 61.104 153.128 131.398 191.481z" />
+                                        <path
+                                            d="m200.348 289.392v216.523c17.919 3.972 36.538 6.085 55.652 6.085 130.067 0 237.47-97.002 253.833-222.609h-309.485z" />
+                                    </g>
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                </svg></div>
+                            <div class="btn"><svg class="w-12 h-12" enable-background="new 0 0 512 512"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m0 256c0 110.07 69.472 203.905 166.955 240.076l22.262-240.077-22.262-240.076c-97.483 36.172-166.955 130.006-166.955 240.077z"
+                                        fill="#6da544" />
+                                    <path
+                                        d="m512 256c0-141.384-114.616-256-256-256-31.314 0-61.311 5.633-89.045 15.923v480.154c27.734 10.291 57.731 15.923 89.045 15.923 141.384 0 256-114.616 256-256z"
+                                        fill="#d80027" />
+                                    <circle cx="166.957" cy="256" fill="#ffda44" r="89.043" />
+                                    <path
+                                        d="m116.87 211.478v55.652c0 27.662 22.424 50.087 50.087 50.087s50.087-22.424 50.087-50.087v-55.652z"
+                                        fill="#d80027" />
+                                    <path
+                                        d="m166.957 283.826c-9.206 0-16.696-7.49-16.696-16.696v-22.26h33.391v22.261c0 9.205-7.49 16.695-16.695 16.695z"
+                                        fill="#f0f0f0" />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                </svg></div>
+                            <div class="btn"><svg class="w-12 h-12" enable-background="new 0 0 512 512"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m512 256c0-31.314-5.632-61.311-15.923-89.043l-240.077-11.131-240.077 11.13c-10.29 27.733-15.923 57.73-15.923 89.044s5.633 61.311 15.923 89.043l240.077 11.131 240.077-11.13c10.291-27.733 15.923-57.73 15.923-89.044z"
+                                        fill="#496e2d" />
+                                    <path
+                                        d="m256 512c110.071 0 203.906-69.472 240.077-166.957h-480.154c36.171 97.485 130.006 166.957 240.077 166.957z"
+                                        fill="#d80027" />
+                                    <path
+                                        d="m15.923 166.957h480.155c-36.172-97.485-130.007-166.957-240.078-166.957s-203.906 69.472-240.077 166.957z"
+                                        fill="#f0f0f0" />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                </svg></div>
+                            <div class="btn"><svg class="w-12 h-12" enable-background="new 0 0 512 512"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="256" cy="256" fill="#f0f0f0" r="256" />
+                                    <path
+                                        d="m256 0c-90.77 0-170.5 47.243-215.956 118.479l347.159 357.37c74.743-44.702 124.797-126.426 124.797-219.849 0-141.384-114.616-256-256-256z"
+                                        fill="#ffda44" />
+                                    <g fill="#0052b4">
+                                        <path
+                                            d="m512 256c0-66.422-25.298-126.93-66.783-172.428v344.857c41.485-45.499 66.783-106.007 66.783-172.429z" />
+                                        <path
+                                            d="m319.789 481.873 26.815-.017 8.272-25.509 8.302 25.499 13.45-.008c8.247-4.415 16.224-9.267 23.9-14.529l-355.839-355.838c-5.864 8.556-11.212 17.49-16.021 26.75l3.162 9.712 26.815-.017-21.684 15.775 8.302 25.499-21.704-15.748-12.945 9.416c-6.901 23.176-10.614 47.725-10.614 73.142 0 141.384 114.616 256 256 256 29.892 0 58.583-5.132 85.25-14.552zm-262.69-237.003 8.27-25.508-21.702-15.75 26.815-.017 8.271-25.509 8.302 25.499 26.815-.017-21.685 15.775 8.302 25.499-21.704-15.748zm55.225 55.652 8.27-25.508-21.702-15.75 26.815-.017 8.271-25.509 8.302 25.499 26.815-.017-21.684 15.775 8.302 25.499-21.704-15.748zm55.224 55.652 8.27-25.508-21.702-15.75 26.815-.017 8.271-25.509 8.302 25.499 26.815-.017-21.684 15.775 8.302 25.499-21.704-15.75zm76.909 39.877-21.685 15.775 8.27-25.508-21.702-15.75 26.815-.017 8.272-25.509 8.302 25.499 26.815-.017-21.684 15.775 8.302 25.499zm33.54 71.427 8.27-25.508-21.702-15.75 26.815-.017 8.271-25.509 8.302 25.499 26.815-.017-21.684 15.775 8.302 25.499-21.704-15.75z" />
+                                    </g>
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                </svg></div>
+                            <div class="btn"><svg class="w-12 h-12" enable-background="new 0 0 512 512"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m144.696 486.598c33.656 16.274 71.413 25.402 111.304 25.402s77.648-9.128 111.304-25.402l22.261-230.598-22.261-230.598c-33.656-16.274-71.413-25.402-111.304-25.402s-77.648 9.128-111.304 25.402l-22.261 230.598z"
+                                        fill="#ffda44" />
+                                    <path
+                                        d="m367.304 486.589c85.631-41.406 144.696-129.096 144.696-230.589s-59.065-189.183-144.696-230.589z"
+                                        fill="#d80027" />
+                                    <path
+                                        d="m144.696 486.589v-461.178c-85.631 41.406-144.696 129.095-144.696 230.589s59.065 189.183 144.696 230.589z"
+                                        fill="#0052b4" />
+                                    <g fill="#d80027">
+                                        <path
+                                            d="m256 345.043c0-40.851 0-89.043 0-89.043h66.783v33.391c0 5.801-11.13 27.057-38.603 44.522-10.405 6.616-21.176 8.744-28.18 11.13z" />
+                                        <path d="m189.217 189.217h66.783v66.783h-66.783z" />
+                                    </g>
+                                    <path
+                                        d="m289.391 166.957c0-12.295-9.967-22.261-22.261-22.261-4.06 0-7.854 1.104-11.13 3.002-3.277-1.898-7.07-3.002-11.13-3.002-12.294 0-22.261 9.966-22.261 22.261h-55.652v111.303c0 41.436 32.906 65.399 58.711 77.821-1.931 3.298-3.059 7.125-3.059 11.224 0 12.295 9.967 22.261 22.261 22.261 4.06 0 7.854-1.104 11.13-3.002 3.277 1.898 7.07 3.002 11.13 3.002 12.294 0 22.261-9.966 22.261-22.261 0-4.099-1.128-7.926-3.06-11.224 25.805-12.422 58.712-36.384 58.712-77.821v-111.303zm22.261 111.303c0 5.801 0 23.452-27.472 40.918-10.406 6.616-21.176 10.906-28.18 13.291-7.004-2.385-17.774-6.675-28.18-13.291-27.472-17.466-27.472-35.117-27.472-40.918v-77.912h111.304z"
+                                        fill="#ff9811" />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                </svg></div>
+                            <div class="btn"><svg class="w-12 h-12" enable-background="new 0 0 512 512"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m512 256c0-31.314-5.632-61.311-15.923-89.043l-240.077-11.131-240.077 11.13c-10.29 27.733-15.923 57.73-15.923 89.044s5.633 61.311 15.923 89.043l240.077 11.131 240.077-11.13c10.291-27.733 15.923-57.73 15.923-89.044z"
+                                        fill="#0052b4" />
+                                    <path
+                                        d="m256 512c110.071 0 203.906-69.472 240.077-166.957h-480.154c36.171 97.485 130.006 166.957 240.077 166.957z"
+                                        fill="#ff9811" />
+                                    <path
+                                        d="m15.923 166.957h480.155c-36.172-97.485-130.007-166.957-240.078-166.957s-203.906 69.472-240.077 166.957z"
+                                        fill="#d80027" />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                </svg></div>
+                            <div class="btn"><svg class="w-12 h-12" enable-background="new 0 0 512 512"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="256" cy="256" fill="#d80027" r="256" />
+                                    <path
+                                        d="m400.696 190.009h-92.726c5.724-5.994 9.247-14.109 9.247-23.052 0-18.441-14.95-33.391-33.391-33.391-11.618 0-21.845 5.936-27.826 14.937-5.981-9.001-16.209-14.937-27.826-14.937-18.441 0-33.391 14.95-33.391 33.391 0 8.943 3.523 17.059 9.247 23.052h-92.725c0 24.589 21.417 44.521 46.004 44.521h-1.484c0 24.59 19.933 44.523 44.523 44.523 0 7.964 2.099 15.43 5.763 21.894l-36.93 36.931 28.334 28.332 40.192-40.191c1.574.577 3.203 1.04 4.885 1.355l-24.287 54.835 37.695 40.748 37.695-40.75-24.287-54.835c1.683-.315 3.311-.777 4.885-1.355l40.192 40.191 28.334-28.333-36.931-36.931c3.665-6.463 5.764-13.93 5.764-21.894 24.589 0 44.522-19.932 44.522-44.523h-1.483c24.587.002 46.005-19.929 46.005-44.518z" />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                    <g />
+                                </svg></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="sliderPage">
+                    <div class="slidesPage">
+                        <input class="thisInput" type="radio" name="radio-btnPage" id="radio1Page">
+                        <input class="thisInput" type="radio" name="radio-btnPage" id="radio2Page">
+                        <input class="thisInput" type="radio" name="radio-btnPage" id="radio3Page">
+                        <input class="thisInput" type="radio" name="radio-btnPage" id="radio4Page">
+                        <input class="thisInput" type="radio" name="radio-btnPage" id="radio5Page">
+                        <div class="slidePage current">
+                            <div class="body">
+                                <div class="title">
+                                    <h2>Come to your senses</h2>
+                                    <div class="btn">
+                                        <a href="#">view our prices</a>
+                                    </div>
+                                </div>
+                                <div class="gallery">
+                                    <div class="top-corner"></div>
+                                    <div class="bottom-corner"></div>
+                                    <div class="slider">
+                                        <div class="slides">
+                                            <input type="radio" name="radio-btn" id="radio1">
+                                            <input type="radio" name="radio-btn" id="radio2">
+                                            <input type="radio" name="radio-btn" id="radio3">
+                                            <input type="radio" name="radio-btn" id="radio4">
+
+                                            <div class="slide first"><img
+                                                    src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                                    alt=""></div>
+                                            <div class="slide"><img
+                                                    src="https://images.pexels.com/photos/1144834/pexels-photo-1144834.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                                    alt=""></div>
+                                            <div class="slide"><img
+                                                    src="https://images.pexels.com/photos/845434/pexels-photo-845434.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                                    alt=""></div>
+                                            <div class="slide"><img
+                                                    src="https://images.pexels.com/photos/1154861/pexels-photo-1154861.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                                    alt=""></div>
+
+                                            <div class="navigation-auto">
+                                                <div class="auto-btn1"></div>
+                                                <div class="auto-btn2"></div>
+                                                <div class="auto-btn3"></div>
+                                                <div class="auto-btn4"></div>
+                                            </div>
+
+                                        </div>
+                                        <div class="navigation-manual">
+                                            <label for="radio1" class="manual-btn"></label>
+                                            <label for="radio2" class="manual-btn"></label>
+                                            <label for="radio3" class="manual-btn"></label>
+                                            <label for="radio4" class="manual-btn"></label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer">
+                                <div class="testimonial">
+                                    <p>"Not just fun but relly cool experience! Lovley stuff, exited to show you it all
+                                        and
+                                        lots
+                                        things to see and try!"</p>
+                                    <span>River of dreams, Florida</span>
+                                </div>
+                                <div class="workingHours">
+                                    <h3>working hours</h3>
+                                    <div class="times">
+                                        <div class="time">
+                                            <span>Monday - Thursday</span>
+                                            <p>10:00 - 20:00</p>
+                                        </div>
+                                        <div class="time">
+                                            <span>Friday - Saturday</span>
+                                            <p>10:00 - 23:00</p>
+                                        </div>
+                                        <div class="time">
+                                            <span>Sunday</span>
+                                            <p>10:00 - 20:00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slidePage">
+                            <div class="about">
+
+                            </div>
+                        </div>
+                        <div class="slidePage">
+                            <div class="exhibits">
+
+                            </div>
+                        </div>
+                        <div class="slidePage">
+                            <div class="groupVisits">
+
+                            </div>
+                        </div>
+                        <div class="slidePage">
+                            <div class="contact">
+                                <div class="contactInfo">
+                                    <div>
+                                        <h2>Contact Info</h2>
+                                        <ul class="info">
+                                            <li>
+                                                <span><img src="location.png" alt=""></span>
+                                                <span>
+                                                    adres<br>
+                                                    adres<br>
+                                                    adres
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span><img src="mail.png" alt=""></span>
+                                                <span>nqkakavsi@mail.com</span>
+                                            </li>
+                                            <li>
+                                                <span><img src="call.png" alt=""></span>
+                                                <span>+49 543 534 4545</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul class="sci">
+                                        <li><a href="#"><img src="1.png" alt=""></a></li>
+                                        <li><a href="#"><img src="2.png" alt=""></a></li>
+                                        <li><a href="#"><img src="3.png" alt=""></a></li>
+                                        <li><a href="#"><img src="4.png" alt=""></a></li>
+                                        <li><a href="#"><img src="5.png" alt=""></a></li>
+                                    </ul>
+                                </div>
+                                <div class="contactForm">
+                                    <h2>Send a Message</h2>
+                                    <div class="formBox">
+                                        <div class="inputBox w50">
+                                            <input type="text" required>
+                                            <span>First Name</span>
+                                        </div>
+                                        <div class="inputBox w50">
+                                            <input type="text" required>
+                                            <span>Last Name</span>
+                                        </div>
+                                        <div class="inputBox w50">
+                                            <input type="email" required>
+                                            <span>Email Address</span>
+                                        </div>
+                                        <div class="inputBox w50">
+                                            <input type="text" required>
+                                            <span>Mobile Number</span>
+                                        </div>
+                                        <div class="inputBox w100">
+                                            <textarea required></textarea>
+                                            <span>Write your message here...</span>
+                                        </div>
+                                        <div class="inputBox w100">
+                                            <input type="submit" value="Send">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
