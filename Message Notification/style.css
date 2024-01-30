@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #013A6B;
+    background-image: -webkit-linear-gradient(30deg, #013A6B 50%, #004E95 50%);
+}
+
+.notification {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0c0f42;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.notification:hover {
+    width: 90px;
+    height: 90px;
+    border: 3px solid #fff;
+    padding: 5px;
+
+}
+
+.text.active {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 20px 480px 0 0;
+    border-radius: 30px;
+    padding: 30px;
+    gap: 25px;
+    transition: 0.5s;
+}
+
+.text{
+    display: none;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.text .element {
+    width: 100%;
+}
+
+.text :not(.element:last-child) {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.text .element:last-child {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.text .element:first-child h3 {
+    font-size: large;
+    letter-spacing: 0.02rem;
+    font-weight: 500;
+}
+
+.text .element:nth-child(2) {
+    width: 100%;
+    height: 70px;
+}
+
+.text .element:nth-child(2) .imgBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: #ffe9f3;
+    border-radius: 5px;
+}
+
+.text .element:nth-child(2) div {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+}
+
+.text .element:nth-child(2) div span{
+    font-weight: 700;
+    letter-spacing: 0.02rem;
+}
+.text .element:nth-child(2) div p{
+    font-weight: 300;
+    color: #666;
+    letter-spacing: 0.02rem;
+}
+
+.text .element:last-child button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    border-radius: 25px;
+    padding: 10px;
+    gap: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+:is(button:last-child) {
+    border: 1px solid #355ea2;
+}
+
+:is(button:last-child, button:last-child svg) {
+    color: #355ea2;
+    fill: #355ea2;
+
+}
+
+:is(button:first-child) {
+    border: 1px solid #3f94b5;
+}
+
+:is(button:first-child, button:first-child svg) {
+    color: #3f94b5;
+    fill: #3f94b5;
+
+}
+
+button:hover{
+    opacity: .8;
+}
