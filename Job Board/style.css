@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 100px;
+    background-color: aliceblue;
+}
+
+body section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+body section h2 {
+    font-size: 45px;
+    letter-spacing: 0.02rem;
+    font-weight: 600;
+    padding: 50px;
+    transition: 0.5s;
+}
+
+body section ul {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    list-style: none;
+    transition: 0.5s;
+}
+
+body section ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 50px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    transition: 0.5s;
+}
+
+body section ul li div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+body section ul li div svg {
+    width: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    background: linear-gradient(127deg, rgb(217, 131, 214) 33%, pink 100%);
+}
+
+
+
+body section ul li div h3 {
+    font-size: 34px;
+    letter-spacing: 0.02rem;
+    font-weight: 500;
+}
+
+body section ul li button {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-size: 18px;
+    letter-spacing: 0.02rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 50px 10px 50px;
+}
+
+body section ul li button:hover,
+body section ul li button:focus {
+    background-color: rgb(82, 18, 219);
+    color: #fff;
+}
+
+body section p {
+    margin-top: 50px;
+    font-size: 18px;
+    text-align: center;
+    color: #666;
+    letter-spacing: 0.02rem;
+    line-height: 2rem;
+    transition: 0.5s;
+}
+
+@media (max-width:1400px) {
+    body section ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:760px) {
+    body section h2 {
+        text-align: center;
+    }
+
+    body section ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
