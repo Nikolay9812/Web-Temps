@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #ccc;
+}
+
+li {
+    list-style: none;
+}
+
+svg {
+    width: 65px;
+    fill: navy;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 450px;
+    height: 550px;
+    padding: 70px 60px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container .content {
+
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.container .box {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    margin-bottom: 10px;
+}
+
+.container .content .circle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 1px solid navy;
+}
+
+.container .content p {
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 0.02rem;
+    font-weight: 500;
+    color: navy;
+}
+
+.container .content p span {
+    font-size: 28px;
+    font-weight: 800;
+    color: navy;
+}
+
+.container ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    gap: 10px;
+    width: 100%;
+}
+
+.container ul li {
+    border: 2px solid navy;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.3s;
+}
+
+small {
+    margin-bottom: 20px;
+}
+
+.container button {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: navy;
+    font-size: 120%;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.3s;
+}
+
+/* JS Classes */
+.highlight {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+/* CSS to style the selected button */
+.selected {
+    background-color: navy;
+    color: #fff;
+}
+
+/* ----------- */
+
+/* CSS to style the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    font-size: xx-large;
+    text-align: center;
+    color: navy;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 100px 100px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* CSS to style the overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* CSS to style the close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}

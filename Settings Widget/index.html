@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Widget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="toogle"><svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+                d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" />
+        </svg>
+        <div class="text">
+            <p>Edit your list</p>
+            <p>Acount settings</p>
+            <p>View your profile</p>
+        </div>
+    </div>
+    <div class="widged">
+        <h2>Customize your widget</h2>
+        <div>
+            <input type="radio" id="contact" name="contact" value="contact" />
+            <label for="contact">Display Contact button</label>
+        </div>
+        <div>
+            <input type="radio" id="email" name="email" value="email" />
+            <label for="email">Hide email addres</label>
+        </div>
+        <div>
+            <input type="radio" id="publish" name="publish" value="publish" />
+            <label for="publish">Display Publish button</label>
+        </div>
+        <div class="btn">
+            <button>Cancel</button>
+            <button>Save</button>
+        </div>
+    </div>
+    <div class="other">
+        <h2>Other</h2>
+        <div>
+            <input type="radio" id="notification" name="notification" value="notification" />
+            <label for="notification">Turn on in-app notifications.</label>
+        </div>
+        <div>
+            <input type="radio" id="newsletters" name="newsletters" value="newsletters" />
+            <label for="newsletters">Recive weekly newsletters and otheroffers.</label>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
