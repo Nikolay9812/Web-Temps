@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="imgBox">
+            <img src="https://lh3.googleusercontent.com/a/ACg8ocIFw1RXgY0qLwK2nimKCxcM3n3WCeBfd31zh1X4XyEoKDw=s288-c-no"
+                alt="">
+        </div>
+        <p>NickGrun invited you to join</p>
+        <strong>Channel name</strong>
+        <span>46k Active users + 78K Total users</span>
+
+        <form id="loginForm">
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required
+                    placeholder="How do you like people to call you?">
+            </div>
+            <div>
+                <input type="checkbox" id="agree" name="agree" required>
+                <label for="agree">I have read and agree to the <a href="#" id="termsLink">Terms of<br> service</a> and
+                    <a href="#" id="privacyLink">Privacy policy</a>.
+                </label>
+            </div>
+            <button type="submit">Continue</button>
+        </form>
+        <a href="#">Alredy have an account</a>
+    </div>
+
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <strong>I have to go to work so i didnt have time to do more :D, maybe next time</strong>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Terms of service</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit expedita obcaecati fugiat numquam, alias
+                et reiciendis dicta facere architecto dolore velit beatae illo, laudantium blanditiis perspiciatis? Quam
+                molestiae magni vero.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit expedita obcaecati fugiat numquam, alias
+                et reiciendis dicta facere architecto dolore velit beatae illo, laudantium blanditiis perspiciatis? Quam
+                molestiae magni vero.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit expedita obcaecati fugiat numquam, alias
+                et reiciendis dicta facere architecto dolore velit beatae illo, laudantium blanditiis perspiciatis? Quam
+                molestiae magni vero.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit expedita obcaecati fugiat numquam, alias
+                et reiciendis .</p>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Privacy policy</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit expedita obcaecati fugiat numquam, alias
+                et reiciendis dicta facere architecto dolore velit beatae illo, laudantium blanditiis perspiciatis? Quam
+                molestiae magni vero.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit expedita obcaecati fugiat numquam, alias
+                et reiciendis dicta facere architecto dolore velit beatae illo, laudantium blanditiis perspiciatis? Quam
+                molestiae magni vero.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit expedita obcaecati fugiat numquam, alias
+                et reiciendis dicta facere architecto dolore velit beatae illo, laudantium blanditiis perspiciatis? Quam
+                molestiae magni vero.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit expedita obcaecati fugiat numquam, alias
+                et reiciendis .</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
