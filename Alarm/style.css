@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+svg {
+    user-select: none;
+    width: 25px;
+    fill: #fff;
+    cursor: pointer;
+}
+
+svg:hover {
+    opacity: .4;
+}
+
+svg:active {
+    opacity: .2;
+}
+
+.back {
+    width: 15px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(https://img.freepik.com/free-vector/green-curve-abstract-background_53876-99569.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30%;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    width: 400px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: linear-gradient(to right, rgb(52, 232, 158), rgb(15, 52, 67));
+}
+
+.container .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.container .chosen-time {
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.container .chosen-time .time {
+    font-size: 47px;
+    font-weight: 700;
+}
+
+.container .chosen-time .date {
+    font-size: 23px;
+    font-weight: 500;
+    color: #666;
+}
+
+.container .add-alarm-btn {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.container .add-alarm-btn .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: inline-end;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00b5ad;
+    padding: 13px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container .add-alarm-btn .circle:hover {
+    opacity: .4;
+}
+
+.container .add-alarm-btn .circle:active {
+    opacity: .2;
+}
+
+.container .alarms {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 35px;
+    list-style: none;
+    width: 100%;
+}
+
+.container .alarms .alarm .days-weak {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #666;
+    width: 95%;
+    margin-top: -10px;
+}
+
+.container .alarms .alarm {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container .alarms .alarm span {
+    color: rgba(0, 0, 0, 0.15);
+}
+
+.container .alarms .alarm svg {
+    fill: rgba(0, 0, 0, 0.15);
+}
+
+
+
+.container .alarms .alarm .create-hour {
+    display: flex;
+    justify-content: space-between;
+    font-size: 37px;
+    font-weight: 700;
+    text-transform: lowercase;
+    width: 100%;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 40px;
+    width: 300px;
+    border-radius: 5px;
+    position: relative;
+    background: linear-gradient(to right, rgb(52, 232, 158), rgb(15, 52, 67));
+}
+
+.modal-content form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content form label {
+    font-size: 130%;
+}
+
+.modal-content form input,
+.modal-content form button {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 15px;
+    font-size: 130%;
+    border-radius: 35px;
+}
+
+.modal-content form input {
+    color: #111;
+    text-align: center;
+}
+
+.modal-content form button {
+    background-color: #00b5ad;
+    cursor: pointer;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #111;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #eee;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add modal animation */
+.modal-content {
+    animation: zoom 0.3s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
