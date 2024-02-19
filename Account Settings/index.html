@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="element">
+            <div class="polka-dot first"></div>
+            <div class="header">
+                <div class="imgBox">
+                    <img src="https://cdn-icons-png.flaticon.com/512/508/508250.png" alt="">
+                </div>
+                <div class="title">
+                    <h1>Login and security</h1>
+                    <p>Add or remove email addresses on your account.</p>
+                </div>
+            </div>
+            <h2>Email addresses</h2>
+            <div id="selectedEmail"></div>
+            <div class="emails">
+                <ul id="emailList"></ul>
+                <p id="noEmailMsg"><span>You haven't added any email address yet.</span><br>
+                    Your email address helps us keep your account secure.It also helps people who already have your
+                    email address discover and connect with you.</p>
+                <button class="btn" id="addEmailBtn"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+                    </svg>Add Email</button>
+            </div>
+        </div>
+
+        <div class="element">
+            <div class="polka-dot second"></div>
+            <div class="header">
+                <div class="imgBox">
+                    <img src="https://cdn-icons-png.freepik.com/512/1787/1787631.png" alt="">
+                </div>
+                <div class="title">
+                    <h1>Phone Numbers</h1>
+                    <p>Add a phone number in case you have a trouble signig in.</p>
+                </div>
+            </div>
+            <h2>Phone Numbers</h2>
+            <div id="selectedPhone"></div>
+            <div class="phoneNumbers">
+                <ul id="phoneNumberList"></ul>
+                <p id="noPhoneNumberMsg"><span>You haven't added any phone numbers yet.</span><br>
+                    Your phone number helps us keep your account secure.But that's not the actual truth we just collect
+                    data
+                    so we can make you buy shenanigans from the net!.Maybe later i will make a bank transaction modal so
+                    we
+                    can take some of your money :D
+                </p>
+                <button class="btn" id="addPhoneBtn"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+                    </svg>Add Phone Number</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Email Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeEmailModal">&times;</span>
+            <input type="text" id="emailInput" placeholder="Email">
+            <button id="addEmailModalBtn">Add</button>
+        </div>
+    </div>
+
+    <!-- Phone Modal -->
+    <div id="phoneModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closePhoneModal">&times;</span>
+            <input type="tel" id="phoneInput" placeholder="Phone Number">
+            <button id="addPhoneModalBtn">Add</button>
+        </div>
+    </div>
+
+    <!-- Edit Email Modal -->
+    <div id="editEmailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeEditEmailModal">&times;</span>
+            <input type="text" id="editEmailInput" placeholder="Email">
+            <button id="saveEditedEmailBtn">Save</button>
+        </div>
+    </div>
+
+    <!-- Edit Phone Modal -->
+    <div id="editPhoneModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeEditPhoneModal">&times;</span>
+            <input type="tel" id="editPhoneInput" placeholder="Phone Number">
+            <button id="saveEditedPhoneBtn">Save</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

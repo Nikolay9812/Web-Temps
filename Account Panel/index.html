@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Switch account</h2>
+        <div class="profiles">
+            <div class="profile">
+                <img src="https://images.pexels.com/photos/1462637/pexels-photo-1462637.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+            </div>
+            <div class="profile">
+                <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+            </div>
+            <div class="profile">
+                <img src="https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+            </div>
+            <div class="next-arrow"></div>
+        </div>
+        <button id="addUserBtn">Add Account</button>
+        <a href="#" id="accountSettingsBtn">Account settings</a>
+        <a href="#">Subscription</a>
+        <a href="#">Support</a>
+        <a href="#">Sing Out</a>
+    </div>
+
+    <!-- Add User Modal -->
+    <div id="addUserModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeAddUserModalBtn">&times;</span>
+            <h2>Add Profile</h2>
+            <input type="text" id="userNameInput" placeholder="Enter username">
+            <input type="file" id="imageInput" accept="image/*">
+            <div class="btnBox">
+                <button id="addUserSubmitBtn">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Account Settings Modal -->
+    <div id="accountSettingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeAccountSettingsModalBtn">&times;</span>
+            <h2>Account Settings</h2>
+            <h1>There is no settings<br>(I wass lasy to do them)</h1>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

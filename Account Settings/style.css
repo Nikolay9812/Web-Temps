@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s;
+}
+
+body {
+    background-image: url(https://img.freepik.com/free-vector/white-background-with-wavy-lines-copy-space_23-2148822145.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 180%;
+    font-weight: 600;
+}
+
+p {
+    font-size: 130%;
+    color: #999;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"] {
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+svg {
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 7px;
+    fill: goldenrod;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: goldenrod;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: gold;
+}
+
+button[disabled] {
+    background-color: #aaaaaa;
+    cursor: not-allowed;
+}
+
+strong {
+    position: absolute;
+    right: 30px;
+    background-color: #1111;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 100px auto;
+}
+
+.element {
+    position: relative;
+    padding: 35px;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #fff;
+}
+
+.element .header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.element .header .imgBox {
+    width: 100px;
+    height: 100px;
+}
+
+.element .header .imgBox img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.element .emails,
+.element .phoneNumbers {
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.element:nth-child(1) {
+    margin-bottom: 15px;
+}
+
+.element .btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: transparent;
+    color: goldenrod;
+    font-size: 120%;
+}
+
+.element .btn:hover {
+    color: gold;
+}
+
+.element ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.element ul li {
+    position: relative;
+    list-style: none;
+    font-size: 120%;
+    width: 100%;
+}
+
+.element ul li :nth-child(1)::after {
+    content: '\01F5D1';
+    font-size: 35px;
+    font-weight: 800;
+    color: goldenrod;
+}
+
+.element ul li :nth-child(1) {
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    width: 50px;
+    background: transparent;
+}
+
+.element ul li :nth-child(2)::after {
+    content: '\270E';
+    font-size: 35px;
+    text-align: center;
+    color: goldenrod;
+}
+
+.element ul li :nth-child(2) {
+    position: absolute;
+    right: 50px;
+    width: 50px;
+    background-color: transparent;
+}
+
+.element ul li :nth-child(3) {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+}
+
+#noPhoneNumberMsg,
+#noEmailMsg {
+    text-align: center;
+    line-height: 1.3em;
+}
+
+#noPhoneNumberMsg span,
+#noEmailMsg span {
+    font-weight: 700;
+    color: #111;
+    line-height: 2.7em;
+}
+
+.emails,
+.phoneNumbers {
+    margin-top: 20px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 50px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 180%;
+    cursor: pointer;
+}
+
+.modal-content .close:hover {
+    opacity: 0.3;
+}
+
+.modal-content input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 120%;
+}
+
+.modal-content button {
+    background-color: goldenrod;
+    width: 100%;
+}
+
+.modal-content button:hover {
+    opacity: 0.3;
+}
+
+
+.selected-items {
+    margin-bottom: 20px;
+}
+
+/* Style for the button container */
+.button-container {
+    display: none;
+    position: absolute;
+    right: 0;
+}
+
+.polka-dot {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: transparent;
+    background-image: radial-gradient(#1111 10%, transparent 11%),
+        radial-gradient(#1111 10%, transparent 11%);
+    background-size: 60px 60px;
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.polka-dot.first {
+    top: -110px;
+    right: -120px;
+}
+
+.polka-dot.second {
+    bottom: -125px;
+    left: -120px;
+}
