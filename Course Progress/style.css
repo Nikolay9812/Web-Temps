@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: hsl(334, 63%, 50%);
+    --main-color-second: hsl(270, 50%, 40%);
+    ;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://img.freepik.com/free-vector/white-background-with-hexagonal-line-pattern-design_1017-28442.jpg?t=st=1708807039~exp=1708810639~hmac=1dbd244579ea8b1f9f0f2a3bee26035668163004ac705f32965d0462a55b4e1c&w=1380);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: .3s;
+    gap: 2rem;
+}
+
+ul {
+    list-style: none;
+}
+
+svg {
+    fill: #fff;
+    width: 30px;
+    cursor: pointer;
+    user-select: none;
+    opacity: 1;
+    transition: .3s;
+}
+
+svg:hover {
+    opacity: .6;
+}
+
+svg:active {
+    opacity: .2;
+}
+
+.container {
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(236, 236, 236, 1) 50%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 3rem;
+    background-color: rgba(236, 236, 236), 1;
+}
+
+.title h2 {
+    font-size: 190%;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.title p {
+    line-height: 1.7rem;
+    font-size: 110%;
+    color: #666;
+}
+
+.container .second-title {
+    color: #666;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    text-transform: uppercase;
+}
+
+.container .course-progress .exercise {
+    cursor: pointer;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    color: rgba(0, 0, 0, 0.35);
+    transition: .3s;
+
+}
+
+.container .course-progress .exercise:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.container .course-progress .exercise.completed {
+    color: #111;
+}
+
+.container .course-progress .exercise.completed::before {
+    content: '\2713';
+    float: right;
+}

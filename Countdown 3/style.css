@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: hsl(334, 63%, 50%);
+    --main-color-second: hsl(270, 50%, 40%);
+    ;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://img.freepik.com/premium-photo/abstract-white-background-with-soft-gradient-lines-copyspace_2227-2564.jpg?w=1060);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: .3s;
+    gap: 2rem;
+}
+
+ul {
+    list-style: none;
+}
+
+svg {
+    fill: #fff;
+    width: 30px;
+    cursor: pointer;
+    user-select: none;
+    opacity: 1;
+    transition: .3s;
+}
+
+svg:hover {
+    opacity: .6;
+}
+
+svg:active {
+    opacity: .2;
+}
+
+#countdown {
+    font-size: 24px;
+    width: 500px;
+}
+
+.counter {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    user-select: none;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.element {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 150%;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    width: 100%;
+    height: 150px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.element:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.element h2:nth-child(1) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    height: 100%;
+    text-align: start;
+    padding: 1rem;
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.element h2:nth-child(2) {
+    color: rgba(0, 0, 0, 0.55);
+}

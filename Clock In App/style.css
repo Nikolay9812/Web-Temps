@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: hsl(334, 63%, 50%);
+    --main-color-second: hsl(270, 50%, 40%);
+    ;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://img.freepik.com/free-vector/modern-abstract-gradient-background-with-elegant-elements-vector-illustration_361591-3775.jpg?size=626&ext=jpg&ga=GA1.1.1437447546.1704926564&semt=ais);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: .3s;
+    gap: 2rem;
+}
+
+ul {
+    list-style: none;
+}
+
+svg {
+    fill: #fff;
+    width: 30px;
+    cursor: pointer;
+    user-select: none;
+    opacity: 1;
+    transition: .3s;
+}
+
+svg:hover,
+.addHour .addBox button:hover,
+.addHour .addBox select:hover {
+    opacity: .6;
+}
+
+svg:active,
+.addHour .addBox button:active,
+.addHour .addBox select:active {
+    opacity: .2;
+}
+
+.grid {
+    width: 350px;
+    height: 500px;
+    border-radius: 25px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+}
+
+.nav {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--main-color);
+    padding: 1rem 1.5rem;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    text-transform: uppercase;
+    width: fit-content;
+    font-size: 120%;
+    color: #666;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.hoursList .list {
+    margin-top: 3rem;
+    height: fit-content;
+    text-align: center;
+}
+
+.hoursList .list svg {
+    width: 80px;
+    fill: rgba(0, 0, 0, 0.35);
+}
+
+.hoursList .list h2 {
+    color: rgba(0, 0, 0, 0.35);
+    font-size: 180%;
+    margin-top: 1rem;
+}
+
+
+
+.addButton {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 4.5rem;
+}
+
+.addButton svg {
+    width: 70px;
+    fill: var(--main-color);
+}
+
+.addHour .addBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1rem;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.addHour .addBox span {
+    text-align: start;
+    font-weight: 600;
+    color: #666;
+    margin: .5rem 0;
+}
+
+.addHour .addBox .calculation,
+.addHour .addBox .btns {
+    display: inline-flex;
+    gap: 0.3rem;
+    width: 100%;
+}
+
+.addHour .addBox button,
+.addHour .addBox .calculation input,
+.addHour .addBox select {
+    padding: 1rem;
+    font-size: 110%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 140%;
+    color: #666;
+    border-radius: 3px;
+}
+
+.addHour .addBox .calculation input {
+    width: 300%;
+}
+
+.addHour .addBox .btns button:nth-child(1) {
+    background: transparent;
+}
+
+.addHour .addBox .btns button:nth-child(2) {
+    background: var(--main-color);
+    color: #fff;
+    border: none;
+}
+
+@media (max-width:600px) {
+    body {
+        flex-direction: column;
+    }
+}

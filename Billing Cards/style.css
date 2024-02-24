@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: hsl(272, 61%, 34%);
+    --main-color-second: hsl(270, 50%, 40%);
+    ;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--main-color);
+    transition: .3s;
+}
+
+a {
+    text-decoration: none;
+}
+
+.invoice-content {
+    position: relative;
+    left: 150px;
+    width: 400px;
+    height: fit-content;
+    padding: 2rem 4rem;
+    border-radius: 25px;
+    background-color: var(--main-color-second);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+}
+
+.invoice-list {
+    margin: 2rem 0;
+}
+
+.invoice-item {
+    display: inline-flex;
+    justify-content: start;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.invoice-item.active {
+    background-color: var(--main-color);
+}
+
+.invoice-download-link {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.invoice-download-link:hover {
+    opacity: .5;
+}
+
+.button {
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.plan {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1.5rem;
+    width: 400px;
+    height: fit-content;
+    padding: 2rem 4rem;
+    border-radius: 25px;
+    background-color: var(--main-color-second);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+}
+
+.btn {
+    display: inline-flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.btn button {
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn button:nth-child(1) {
+    border: none;
+    background: var(--main-color);
+    color: #fff;
+}
+
+.btn button:nth-child(2) {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: transparent;
+}
+
+.btn button:hover,
+.button:hover {
+    opacity: 0.5;
+}
+
+.btn button:active,
+.button:active {
+    opacity: 0.3;
+}
