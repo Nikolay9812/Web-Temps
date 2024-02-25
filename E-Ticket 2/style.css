@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: radial-gradient(circle at 88% 44%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 8%, transparent 8%, transparent 92%), radial-gradient(circle at 46% 95%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 8%, transparent 8%, transparent 92%), radial-gradient(circle at 83% 91%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 24% 95%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 42% 85%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 61% 40%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 27% 33%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 4%, transparent 4%, transparent 96%), radial-gradient(circle at 30% 12%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 4%, transparent 4%, transparent 96%), radial-gradient(circle at 99% 87%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 4%, transparent 4%, transparent 96%), radial-gradient(circle at 84% 63%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 4%, transparent 4%, transparent 96%), linear-gradient(45deg, rgb(200, 21, 78), rgb(191, 186, 10));
+}
+
+body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(circle at 88% 44%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 8%, transparent 8%, transparent 92%), radial-gradient(circle at 46% 95%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 8%, transparent 8%, transparent 92%), radial-gradient(circle at 83% 91%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 24% 95%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 42% 85%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 61% 40%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 6%, transparent 6%, transparent 94%), radial-gradient(circle at 27% 33%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 4%, transparent 4%, transparent 96%), radial-gradient(circle at 30% 12%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 4%, transparent 4%, transparent 96%), radial-gradient(circle at 99% 87%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 4%, transparent 4%, transparent 96%), radial-gradient(circle at 84% 63%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 4%, transparent 4%, transparent 96%), linear-gradient(45deg, rgba(200, 21, 78, 0.9), rgba(191, 186, 10, 0.6)), url(https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/B6981BDF339764E6C56626C9DE0820CEF297EAF069F62F244E0F50061219F069/scale?width=1200&amp;aspectRatio=1.78&amp;format=webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    background-color: #f2f2f2;
+    width: 450px;
+    text-align: center;
+}
+
+.header {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    user-select: none;
+    padding: .8rem;
+}
+
+.header .element {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.header .element svg {
+    width: 1.2rem;
+}
+
+.title {
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-size: 100%;
+    color: #666;
+}
+
+.content {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 2rem 1.5rem 1rem 1.5rem;
+    background-color: #fff;
+}
+
+.content-top-line {
+    height: .5rem;
+    width: 100%;
+    background-image: var(--main-color);
+}
+
+.content-title {
+    margin: 2rem 0;
+}
+
+.content-number {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-size: 13px;
+    color: #666;
+}
+
+.content-number span {
+    color: #999;
+    font-size: 150%;
+    font-weight: 700;
+}
+
+.content-element {
+    background-image: var(--main-color);
+    color: #f2f2f2;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1.5rem;
+    text-transform: uppercase;
+}
+
+.barcode-box {
+    border-top: 3px dashed rgba(0, 0, 0, 0.35);
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    padding: 2rem;
+}
+
+.barcode {
+    background-image: url(https://img.freepik.com/free-psd/barcode-illustration-isolated_23-2150584086.jpg?size=626&ext=jpg&ga=GA1.1.1319243779.1708732800&semt=sph);
+    background-position: center;
+    width: 100%;
+    height: 70px;
+}
+
+.content-footer {
+    display: inline-flex;
+    gap: 1rem;
+    margin: 1rem 0 3rem 0;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.content-footer p span {
+    font-size: 110%;
+    font-weight: 700;
+    color: #999;
+}
+
+.text {
+    color: #999;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.footer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+    background-color: #fff;
+    padding: 0.8rem;
+}
+
+.footer svg,
+.footer p {
+    cursor: pointer;
+    transition: color .5s;
+    transition: fill .5s;
+}
+
+.footer svg:hover,
+.footer p:hover {
+    color: rgb(191, 186, 10);
+    fill: rgb(191, 186, 10);
+}
+
+.footer svg {
+    width: 2rem;
+}
+
+.footer p {
+    color: rgb(200, 21, 78, 0.66);
+    font-weight: 700;
+}
