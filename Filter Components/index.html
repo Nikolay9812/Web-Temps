@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Components</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="app-content">
+        <ul class="filter-components">
+            <li class="component">
+                <input type="text" id="appFilterInput" placeholder="Search for apps">
+            </li>
+
+            <li class="component">
+                <select id="sortOptions">
+                    <option value="default">Sort</option>
+                    <option value="topRated">Top Rated</option>
+                    <option value="topTrending">Top Trending</option>
+                    <option value="topSelling">Top Selling</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </li>
+
+            <li class="component">
+                <input type="checkbox" id="freeAppsCheckbox"> Free for all teams
+            </li>
+
+            <li class="component">
+                <select id="categoryOptions">
+                    <option value="all">Category</option>
+                    <option value="games">Games</option>
+                    <option value="social">Social</option>
+                    <option value="utilities">Utilities</option>
+                </select>
+            </li>
+
+            <li class="component">
+                <select id="platformOptions">
+                    <option value="all">Platform</option>
+                    <option value="iOS">iOS</option>
+                    <option value="Android">Android</option>
+                    <option value="Windows">Windows</option>
+                </select>
+            </li>
+
+            <li class="component">
+                <select id="downloadOptions">
+                    <option value="all">Downloads</option>
+                    <option value="1000000">1M+</option>
+                    <option value="10000000">10M+</option>
+                    <option value="100000000">100M+</option>
+                </select>
+            </li>
+        </ul>
+
+        <ul class="app-list" id="filteredAppsList"></ul>
+
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
