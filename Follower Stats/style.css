@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(https://img.freepik.com/free-photo/business-background-woman-showing-invisible-object-hand-gesture_53876-124709.jpg?t=st=1709279991~exp=1709283591~hmac=791f3e593a08d4419278b7898e046397e5d81af05014e2af71d6b768c2fad730&w=1380);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+svg {
+    width: 2.5rem;
+}
+
+div {
+    padding: 1.5rem;
+    border-radius: 5px;
+    border-top: 3px solid #FEDA75;
+    background-color: rgba(149, 157, 165, 0.2);
+    text-align: center;
+    min-width: 150px;
+    margin-bottom: 17rem;
+}
+
+h3 {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 1rem 0;
+    user-select: none;
+    list-style: none;
+}
+
+ul li {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color ease-in .3s;
+    color: #555;
+}
+
+ul li:hover {
+    background-color: #F5AC4E;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+button {
+    background-color: #FEDA75;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+button:hover {
+    opacity: .3;
+}
+
+button:active {
+    opacity: .5;
+}

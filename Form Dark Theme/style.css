@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --button-background: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.09), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.03), transparent, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.06) 4px), linear-gradient(90deg, rgba(151, 253, 252, 255), rgba(96, 154, 155, 255));
+    --second-button-background: linear-gradient(45deg, rgb(254, 236, 230), rgba(96, 154, 155, 255), rgb(180, 219, 231), rgb(107, 202, 231));
+}
+
+body {
+    background-image: url(https://img.freepik.com/free-vector/wave-line-gradient-design-minimalist-style_483537-3794.jpg?t=st=1709364904~exp=1709368504~hmac=7ba5ace221eb98582d1e6c2420aa3573715e5e72c8f036efa6fdd639085e827d&w=1380);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.element {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 25px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    transition: .3s;
+}
+
+.element form input {
+    padding: 1rem;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 5px;
+    font-size: large;
+}
+
+.element form input[type="submit"] {
+    margin-top: .5rem;
+    cursor: pointer;
+    border: none;
+    background-image: var(--button-background);
+    color: #fff;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.element form input[type="submit"]:hover {
+    opacity: .5;
+}
+
+.element form input[type="submit"]:active {
+    opacity: .7;
+}
+
+.register {
+    max-width: 300px;
+    top: 5rem;
+    right: 10rem;
+}
+
+.register .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-decoration: none;
+    color: #666;
+}
+
+.register .close:active {
+    opacity: .2;
+}
+
+.register p {
+    line-height: 1.7rem;
+}
+
+.register p,
+.register label {
+    color: #666;
+}
+
+.register form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    gap: .5rem;
+}
+
+.register form label {
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
+.register form textarea {
+    resize: none;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.about {
+    flex-direction: row;
+    gap: 1rem;
+    max-width: 450px;
+    bottom: 25rem;
+    left: 23rem;
+}
+
+.about svg {
+    width: 120px;
+    fill: rgba(96, 154, 155, 255);
+}
+
+.about .content h3 {
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.about .content p {
+    margin-bottom: 1rem;
+}
+
+.about .content a {
+    padding: .5rem 1.5rem;
+    background-image: var(--second-button-background);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.about .content a:hover {
+    opacity: .4;
+}
+
+.about .content a:active {
+    opacity: .6;
+}
+
+.subscribe {
+    max-width: 450px;
+    bottom: 23rem;
+    left: 17rem;
+}
+
+.subscribe svg {
+    width: 60px;
+    margin-bottom: .5rem;
+}
+
+.subscribe h2 {
+    margin-bottom: 1rem;
+}
+
+@media (max-width:600px) {
+
+    body {
+        height: 110vh;
+    }
+
+    .element {
+        margin-bottom: 2rem;
+    }
+
+
+    .register {
+        margin-top: 2rem;
+        min-width: 450px;
+    }
+
+    .register,
+    .about,
+    .subscribe {
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+    }
+}
