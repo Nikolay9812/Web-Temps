@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(https://img.freepik.com/free-vector/modern-technology-background_1035-7592.jpg?t=st=1709415973~exp=1709419573~hmac=1f8ec512a550405425a969e1855c1860ef2bad6eace55f7c64bd5808dc371fba&w=740);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem 4rem;
+    border-radius: .5rem;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    transition: .3s;
+}
+
+.container__close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    color: #000;
+    font-size: larger;
+    padding: 1rem;
+}
+
+.container__top-title {
+    font-size: xx-large;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.container__bottom-title {
+    font-weight: 400;
+    font-size: medium;
+}
+
+.container__selection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.container__selection-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    row-gap: 1rem;
+    flex-direction: column;
+    border: .5rem solid rgba(0, 0, 0, 0.10);
+    scale: 1;
+    transition: scale .3s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.container__selection-card:hover {
+    scale: 1.1;
+}
+
+.container__selection-card img {
+    width: 4rem;
+}
+
+.container__selection-card span {
+    font-size: medium;
+}
+
+@media (max-width:600px) {
+    .container {
+        margin: 0 2rem;
+    }
+}
