@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eli's Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Modal for Adding/Editting Items -->
+    <div id="addItemModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add/Edit Item</h2>
+            <form id="addItemForm">
+                <label for="itemName">Name:</label>
+                <input type="text" id="itemName" name="name" required>
+                <label for="itemCalories">Calories:</label>
+                <input type="number" id="itemCalories" name="calories" required>
+                <label for="itemProtein">Protein (g):</label>
+                <input type="number" id="itemProtein" name="protein" required>
+                <label for="itemCarbohydrates">Carbohydrates (g):</label>
+                <input type="number" id="itemCarbohydrates" name="carbohydrates" required>
+                <label for="itemFat">Fat (g):</label>
+                <input type="number" id="itemFat" name="fat" required>
+                <input type="hidden" id="itemId" name="id">
+                <button type="submit" id="saveItemButton">Save</button>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="imgBox"><img src="images/cura.png" alt=""></div>
+        <h1>Eli's<br>Calories Calculator</h1>
+        <button id="addItemButton">Add Item</button>
+        <div class="food-grid" id="foodGrid"></div>
+
+        <button id="calculateButton">Calculate Calories</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

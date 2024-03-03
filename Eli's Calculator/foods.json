@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Apple",
+        "image": "images/apple.png",
+        "calories": 52
+    },
+    {
+        "name": "Banana",
+        "image": "images/banana.png",
+        "calories": 89
+    },
+    {
+        "name": "Orange",
+        "image": "images/orange.png",
+        "calories": 47
+    },
+    {
+        "name": "Chicken Breast",
+        "image": "images/chicken.png",
+        "calories": 165
+    },
+    {
+        "name": "Pork Steck",
+        "image": "images/pork.png",
+        "calories": 242
+    },
+    {
+        "name": "Karpfen",
+        "image": "images/karpfen.png",
+        "calories": 135
+    },
+    {
+        "name": "Onion",
+        "image": "images/onion.png",
+        "calories": 39
+    },
+    {
+        "name": "Tomato",
+        "image": "images/tomato.png",
+        "calories": 18
+    },
+    {
+        "name": "Paprika",
+        "image": "images/paprika.png",
+        "calories": 282
+    }
+]
