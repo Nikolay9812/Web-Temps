@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Cost Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Shipping Cost Calculator</h1>
+        <form id="shippingForm">
+            <label for="origin">Origin:</label>
+            <select id="origin">
+                <option value="Paris">Paris</option>
+                <option value="Berlin">Berlin</option>
+                <!-- Add more options as needed -->
+            </select>
+            <label for="destination">Destination:</label>
+            <select id="destination">
+                <option value="Madrid">Madrid</option>
+                <option value="Rome">Rome</option>
+                <!-- Add more options as needed -->
+            </select>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" min="0">
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

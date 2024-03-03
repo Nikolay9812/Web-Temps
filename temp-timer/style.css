@@ -1,0 +1,27 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  #timer {
+    font-size: 3em;
+  }
+
+  button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
+
+  #savedTimesTable {
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+
+  /* Calendar */

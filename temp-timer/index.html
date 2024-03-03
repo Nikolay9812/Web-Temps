@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Clock Timer</title>
+  <style>
+    /* CSS for styling the calendar */
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    #timer {
+      font-size: 3em;
+    }
+
+    button {
+      font-size: 1.5em;
+      padding: 10px 20px;
+      margin-top: 20px;
+    }
+
+    #savedTimesTable {
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .calendar {
+      width: 700px;
+      /* Adjust the width as desired */
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 16px;
+      /* Adjust the font size as desired */
+    }
+
+    .month-year {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    .prev-next {
+      cursor: pointer;
+    }
+
+    .prev-month-day {
+      color: #999;
+      /* Color for previous month's days */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="timer">00:00:00</h1>
+    <button id="startBtn">Start</button>
+  </div>
+
+  <table id="savedTimesTable">
+    <thead>
+      <tr>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Date</th>
+        <th>Day of Week</th>
+        <th>Stopped Hours</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="calendar">
+    <div class="prev-next">
+      <span class="prev">&#10094; Prev</span>
+      <span class="next">Next &#10095;</span>
+    </div>
+    <div class="month-year"></div>
+    <table id="calendarTable"></table>
+  </div>
+
+  <script>
+    let timerInterval;
+    let startTime;
+    let endTime;
+    let isTimerRunning = false;
+
+    const timerDisplay = document.getElementById('timer');
+    const startButton = document.getElementById('startBtn');
+    const savedTimesTableBody = document.querySelector('#savedTimesTable tbody');
+    const calendarDiv = document.querySelector('.calendar');
+    const monthYearDiv = document.querySelector('.month-year');
+    const calendarTable = document.getElementById('calendarTable');
+
+    function startTimer() {
+      if (!isTimerRunning) {
+        startTime = new Date();
+        timerInterval = setInterval(updateTimer, 1000);
+        isTimerRunning = true;
+        startButton.textContent = 'Stop';
+      } else {
+        stopTimer();
+      }
+    }
+
+    function stopTimer() {
+      clearInterval(timerInterval);
+      endTime = new Date();
+      isTimerRunning = false;
+      startButton.textContent = 'Start';
+      saveTime();
+      resetTimer();
+    }
+
+    function updateTimer() {
+      const currentTime = new Date();
+      const timeDiff = Math.floor((currentTime - startTime) / 1000);
+      const hours = Math.floor(timeDiff / 3600);
+      const minutes = Math.floor((timeDiff % 3600) / 60);
+      const seconds = timeDiff % 60;
+
+      timerDisplay.textContent = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+    }
+
+    function pad(number) {
+      return number < 10 ? '0' + number : number;
+    }
+
+    function saveTime() {
+      const startDate = formatDate(startTime);
+      const endDate = formatDate(endTime);
+      const currentDate = getCurrentDate(); // Get current date in YYYY/MM/DD format
+      const dayOfWeek = getDayOfWeek(startTime.getDay());
+      const stoppedHours = timerDisplay.textContent;
+
+      const newRow = savedTimesTableBody.insertRow();
+      newRow.insertCell().textContent = formatDate(startTime); // Started hour
+      newRow.insertCell().textContent = formatDate(endTime); // Stopped hour
+      newRow.insertCell().textContent = currentDate; // Current date
+      newRow.insertCell().textContent = dayOfWeek; // Day of week
+      newRow.insertCell().textContent = stoppedHours; // Stopped hours
+
+      // Display stopped hours for the current day of the month
+      const currentDateObj = new Date();
+      const currentDay = currentDateObj.getDate();
+      const calendarDateCells = calendarTable.querySelectorAll('td');
+      calendarDateCells.forEach(cell => {
+        if (cell.textContent == currentDay) {
+          cell.textContent = stoppedHours;
+        }
+      });
+    }
+
+    function formatDate(date) {
+      const hours = pad(date.getHours());
+      const minutes = pad(date.getMinutes());
+      const seconds = pad(date.getSeconds());
+      return `${hours}:${minutes}:${seconds}`;
+    }
+
+    function getCurrentDate() {
+      const currentDate = new Date();
+      const year = currentDate.getFullYear();
+      const month = pad(currentDate.getMonth() + 1); // Month is zero-based, so we add 1
+      const day = pad(currentDate.getDate());
+      return `${year}/${month}/${day}`;
+    }
+
+    function getDayOfWeek(day) {
+      const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      return daysOfWeek[day];
+    }
+
+    function resetTimer() {
+      timerDisplay.textContent = '00:00:00';
+    }
+
+    startButton.addEventListener('click', startTimer);
+
+    // JavaScript for creating the calendar
+    var today = new Date();
+    var currentMonth = today.getMonth();
+    var currentYear = today.getFullYear();
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+    // Show initial calendar
+    showCalendar(currentMonth, currentYear);
+
+    // Attach event listeners to previous and next buttons
+    document.querySelector('.prev').addEventListener('click', prevMonth);
+    document.querySelector('.next').addEventListener('click', nextMonth);
+
+    function showCalendar(month, year) {
+      var firstDay = new Date(year, month, 1);
+      var lastDay = new Date(year, month + 1, 0);
+      var totalDays = lastDay.getDate();
+
+      var table = document.getElementById("calendarTable");
+      var html = '<tr><th colspan="7">' + months[month] + ' ' + year + '</th></tr>';
+      html += '<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>';
+
+      var date = 1;
+      var numRows = 4; // Display four rows
+
+      for (var i = 0; i < numRows; i++) {
+        html += '<tr>';
+        for (var j = 0; j < 7; j++) {
+          if (i === 0 && j < firstDay.getDay()) {
+            // Previous month's days
+            var prevMonthLastDay = new Date(year, month, 0).getDate();
+            html += '<td class="prev-month-day">' + (prevMonthLastDay - firstDay.getDay() + j + 1) + '</td>';
+          } else if (date > totalDays) {
+            // Next month's days
+            html += '<td class="next-month-day">' + (date - totalDays) + '</td>';
+            date++;
+          } else {
+            // Current month's days
+            html += '<td>' + date + '</td>';
+            date++;
+          }
+        }
+        html += '</tr>';
+      }
+
+      table.innerHTML = html;
+      monthYearDiv.textContent = months[month] + ' ' + year;
+    }
+
+    function prevMonth() {
+      currentMonth -= 1;
+      if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear -= 1;
+      }
+      showCalendar(currentMonth, currentYear);
+    }
+
+    function nextMonth() {
+      currentMonth += 1;
+      if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear += 1;
+      }
+      showCalendar(currentMonth, currentYear);
+    }
+  </script>
+</body>
+
+</html>

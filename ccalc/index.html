@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Shipping Calculator</h2>
+    <form id="shipping-calculator">
+      <div class="form-group">
+        <label for="location-country">Location Country:</label>
+        <select id="location-country" name="location-country" required>
+          <option value="">Select Country</option>
+          <option value="Germany">Germany</option>
+          <option value="France">France</option>
+          <option value="Italy">Italy</option>
+          <option value="Spain">Spain</option>
+          <option value="United Kingdom">United Kingdom</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="location-city">Location City:</label>
+        <select id="location-city" name="location-city" required>
+          <option value="">Select City</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="destination-country">Destination Country:</label>
+        <select id="destination-country" name="destination-country" required>
+          <option value="">Select Country</option>
+          <option value="Germany">Germany</option>
+          <option value="France">France</option>
+          <option value="Italy">Italy</option>
+          <option value="Spain">Spain</option>
+          <option value="United Kingdom">United Kingdom</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="destination-city">Destination City:</label>
+        <select id="destination-city" name="destination-city" required>
+          <option value="">Select City</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" name="weight" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dimensions">Dimensions (cm):</label>
+        <input type="text" id="dimensions" name="dimensions" placeholder="Length x Width x Height" required>
+      </div>
+
+      <button type="submit" id="calculate-btn">Calculate Price</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

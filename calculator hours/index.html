@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <h2>Time Calculator</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Car Plate</th>
+                <th>Route</th>
+                <th>Start Time (24h format)</th>
+                <th>End Time (24h format)</th>
+                <th>Start Km</th>
+                <th>End Km</th>
+                <th>Km Sum</th>
+                <th>Total Worked Hours</th>
+                <th>Day of Week</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody id="time-entries">
+            <!-- Table rows will be dynamically added here -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="7" style="text-align: right;">Total Hours:</td>
+                <td id="total-hours">0</td>
+                <td colspan="2">
+                    <span id="current-day"></span> <span id="current-date"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="10"><button id="add-row-btn">Add Row</button></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
