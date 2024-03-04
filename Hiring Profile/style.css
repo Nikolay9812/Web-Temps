@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: url(https://img.freepik.com/free-vector/abstract-watercolor-pastel-background_87374-139.jpg?t=st=1709536028~exp=1709539628~hmac=f966d11b19ba9be5ab458c4d0835d9e062596795e1a54cd91280172af4df2191&w=1060);
+    background-position: center;
+    background-size: cover;
+}
+
+svg {
+    width: 1.8rem;
+    fill: #fff;
+}
+
+.section {
+    display: none;
+}
+
+.active {
+    color: red;
+    /* Change to desired active link color */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container {
+    position: relative;
+    margin: 7rem auto;
+    max-width: 450px;
+    background-color: #fff;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transition: .3s;
+}
+
+.container__back-button,
+.container__like-button {
+    position: absolute;
+    margin: 1rem;
+    top: 0;
+    z-index: 1;
+}
+
+.container__back-button {
+    left: 0;
+}
+
+.container__like-button {
+    right: 0;
+}
+
+.container__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    object-fit: cover;
+    border-top: 6px solid #fff;
+    width: 100%;
+    color: #fff;
+    padding-top: 5rem;
+}
+
+.container__header .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.container__user-name {
+    font-size: 180%;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    z-index: 1;
+}
+
+.container__user-image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 6px solid skyblue;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container__user-image .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    scale: 1;
+    transition: scale .3s;
+}
+
+.container__user-image .img:hover {
+    scale: 1.2;
+}
+
+.container__info {
+    padding: 1rem 2rem 3rem 2rem;
+    text-align: center;
+    font-size: 110%;
+    color: #666;
+}
+
+.container__content {
+    width: 100%;
+}
+
+.container__nav {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.container__nav a {
+    text-decoration: none;
+    color: #888;
+    cursor: pointer;
+    scale: 1;
+    transition: scale .3s;
+}
+
+.container__nav a:hover {
+    scale: 1.3;
+    color: #000;
+}
+
+.container__section {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+}
+
+.container__button {
+    text-align: center;
+    background-color: rgba(1, 182, 164, 1);
+    width: 100%;
+    padding: 1.7rem;
+    cursor: pointer;
+    transition: background-color ease-in .3s;
+}
+
+.container__button a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 130%;
+}
+
+.container__button:hover {
+    background-color: #93e9be;
+}
+
+#section2 {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    text-align: start;
+    width: 100%;
+    height: 100%;
+}
+
+.progress-bar-title {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #01b6a4;
+}
+
+.progress-bar {
+    position: relative;
+    height: 15px;
+    background-color: rgba(1, 182, 164, .3);
+    border-radius: 25px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #3f4e88, #01b6a4);
+    transition: background ease-in .5s;
+}
+
+.progress-bar:nth-child(2)::before {
+    width: 35%;
+}
+
+.progress-bar:nth-child(4)::before {
+    width: 65%;
+}
+
+.progress-bar:nth-child(6)::before {
+    width: 80%;
+}
